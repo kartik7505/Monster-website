@@ -203,21 +203,18 @@ document.addEventListener("DOMContentLoaded", () => {
     popupAnchor: [0, -12]
   });
 
-  // Mock Database of Indian Stores
-  const stores = [
-    { name: "24Seven Convenience Store", address: "Connaught Place, New Delhi 110001", lat: 28.6304, lng: 77.2177, stock: "350ML SINGLE & 4-PACK" },
-    { name: "Spencer's Retail", address: "MG Road, Gurgaon 122002", lat: 28.4795, lng: 77.0799, stock: "12-PACK CASE" },
-    { name: "Reliance Smart", address: "Sector 18, Noida 201301", lat: 28.5708, lng: 77.3228, stock: "350ML SINGLE CHILLED" },
-    { name: "Nature's Basket", address: "Bandra West, Mumbai 400050", lat: 19.0596, lng: 72.8295, stock: "350ML SINGLE & 4-PACK" },
-    { name: "Foodhall", address: "Lower Parel, Mumbai 400013", lat: 18.9953, lng: 72.8252, stock: "12-PACK CASE" },
-    { name: "Spar Hypermarket", address: "Koramangala, Bangalore 560034", lat: 12.9352, lng: 77.6245, stock: "350ML SINGLE CHILLED" },
-    { name: "More Supermarket", address: "Indiranagar, Bangalore 560038", lat: 12.9784, lng: 77.6408, stock: "350ML SINGLE & 4-PACK" },
-    { name: "Ratnadeep Supermarket", address: "Jubilee Hills, Hyderabad 500033", lat: 17.4326, lng: 78.4071, stock: "350ML SINGLE & 4-PACK" },
-    { name: "Nilgiris", address: "Anna Nagar, Chennai 600040", lat: 13.0850, lng: 80.2101, stock: "12-PACK CASE" },
-    { name: "Keventers Supermarket", address: "Park Street, Kolkata 700016", lat: 22.5528, lng: 88.3516, stock: "350ML SINGLE CHILLED" }
-  ];
-
   let currentMarkers = [];
+
+  function getDistance(lat1, lon1, lat2, lon2) {
+    const R = 6371; // km
+    const dLat = (lat2 - lat1) * Math.PI / 180;
+    const dLon = (lon2 - lon1) * Math.PI / 180;
+    const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+              Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+              Math.sin(dLon/2) * Math.sin(dLon/2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+    return R * c;
+  }
 
   // Function to render stores in sidebar and map
   function renderStores(storesToDisplay, mapCenter = null) {
@@ -229,12 +226,23 @@ document.addEventListener("DOMContentLoaded", () => {
     currentMarkers = [];
     container.innerHTML = "";
 
-    countLabel.textContent = `${storesToDisplay.length} LOCATIONS FOUND`;
+    countLabel.textContent = storesToDisplay.length === 0 && !mapCenter ? "ENTER A LOCATION TO SEARCH" : `${storesToDisplay.length} LOCATIONS FOUND`;
 
     if (storesToDisplay.length === 0) {
-      container.innerHTML = `<div class="text-on-surface-variant p-4 text-center">No stores found near this location. Try a major city like New Delhi, Mumbai, or Bangalore.</div>`;
-      if(mapCenter) map.setView(mapCenter, 10);
+      if(mapCenter) {
+        container.innerHTML = `<div class="text-on-surface-variant p-4 text-center">No stores found near this location. Try a wider search.</div>`;
+        map.setView(mapCenter, 10);
+      } else {
+        container.innerHTML = `<div class="text-on-surface-variant p-4 text-center">Please enter a PIN code or city to find stores near you.</div>`;
+      }
       return;
+    }
+
+    if (mapCenter) {
+      storesToDisplay.forEach(store => {
+        store.distance = getDistance(mapCenter[0], mapCenter[1], store.lat, store.lng);
+      });
+      storesToDisplay.sort((a, b) => a.distance - b.distance);
     }
 
     // Add to list and map
@@ -244,7 +252,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .addTo(map)
         .bindPopup(`
           <div class="font-headline-sm uppercase text-white">${store.name}</div>
-          <div class="text-on-surface-variant mt-1 mb-2">${store.address}</div>
+          <div class="text-on-surface-variant mt-1 mb-2">${store.distance ? store.distance.toFixed(1) + ' km • ' : ''}${store.address}</div>
           <div class="text-primary-container text-xs font-bold uppercase border border-primary-container/30 px-2 py-1 rounded inline-block bg-primary-container/10">
             ${store.stock}
           </div>
@@ -257,7 +265,7 @@ document.addEventListener("DOMContentLoaded", () => {
       el.innerHTML = `
         <div>
           <h4 class="font-label-caps-lg text-[18px] uppercase text-white group-hover:text-primary-container transition-colors">${store.name}</h4>
-          <p class="font-body-sm text-[13px] text-on-surface-variant mt-1">${store.address}</p>
+          <p class="font-body-sm text-[13px] text-on-surface-variant mt-1">${store.distance ? store.distance.toFixed(1) + ' km • ' : ''}${store.address}</p>
           <div class="mt-2 inline-flex px-2 py-1 bg-primary-container/10 border border-primary-container/20 rounded font-label-caps-sm text-[10px] uppercase text-primary-container">
             IN STOCK: ${store.stock}
           </div>
@@ -283,10 +291,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Initial Render (Show all)
-  renderStores(stores);
+  // Initial Render (Empty)
+  renderStores([]);
 
-  // Form Submission (Geocoding)
+  // Form Submission (Geocoding + Overpass API)
   const form = document.getElementById("search-form");
   const input = document.getElementById("locator-input");
   const loader = document.getElementById("map-loading");
@@ -299,27 +307,47 @@ document.addEventListener("DOMContentLoaded", () => {
     loader.classList.remove("hidden");
 
     try {
-      // Use Nominatim API for free geocoding (OpenStreetMap)
-      // Restrict search to India
+      // Use Nominatim API for free geocoding
       const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}&countrycodes=in`);
       const data = await response.json();
-
-      loader.classList.add("hidden");
 
       if (data && data.length > 0) {
         const lat = parseFloat(data[0].lat);
         const lon = parseFloat(data[0].lon);
         
-        // Find stores within roughly ~50-100km (simple euclidean for demo)
-        // 1 deg is roughly 111km. So 1 deg radius.
-        const radiusDeg = 1.5; 
-        const nearbyStores = stores.filter(s => {
-          const d = Math.sqrt(Math.pow(s.lat - lat, 2) + Math.pow(s.lng - lon, 2));
-          return d < radiusDeg;
+        // Fetch real stores nearby using Overpass API (radius 10km)
+        const overpassQuery = `
+          [out:json];
+          (
+            node["shop"="supermarket"](around:10000,${lat},${lon});
+            node["shop"="convenience"](around:10000,${lat},${lon});
+          );
+          out body 15;
+        `;
+        
+        const overpassRes = await fetch("https://overpass-api.de/api/interpreter", {
+          method: "POST",
+          body: overpassQuery
+        });
+        const overpassData = await overpassRes.json();
+        
+        loader.classList.add("hidden");
+
+        const nearbyStores = overpassData.elements.map(el => {
+           const name = el.tags.name || (el.tags.shop === 'supermarket' ? 'Supermarket' : 'Convenience Store');
+           const address = [el.tags['addr:street'], el.tags['addr:city'], el.tags['addr:postcode']].filter(Boolean).join(', ') || 'Local Indian Retailer';
+           return {
+             name: name,
+             address: address,
+             lat: el.lat,
+             lng: el.lon,
+             stock: "350ML SINGLE & 4-PACK"
+           };
         });
 
         renderStores(nearbyStores, [lat, lon]);
       } else {
+        loader.classList.add("hidden");
         alert("Location not found in India. Please try another PIN code or city.");
         renderStores([], null); // clear
       }
