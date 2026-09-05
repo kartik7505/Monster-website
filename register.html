@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monster Ultra - Authenticate</title>
+    <title>Monster Ultra - Create Profile</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,8 +54,8 @@
     </nav>
     <div class="flex items-center gap-space-md">
       <a class="hidden sm:inline-flex items-center justify-center bg-primary-container text-black font-label-caps-lg text-label-caps-lg uppercase px-space-lg py-space-xs rounded-none shadow-[0_0_20px_-4px_rgba(0,240,255,0.4)] hover:bg-white hover:text-black transition-all duration-200" href="where-to-buy.html">Find in Stores</a>
-      <a href="login.html" class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center border border-primary-container cursor-pointer transition-colors group">
-        <span class="material-symbols-outlined text-black text-[18px]">person</span>
+      <a href="login.html" class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center border border-outline-variant/30 hover:bg-primary-container hover:border-primary-container cursor-pointer transition-colors group">
+        <span class="material-symbols-outlined text-on-surface text-[18px] group-hover:text-black transition-colors">person</span>
       </a>
     </div>
   </div>
@@ -69,35 +69,35 @@
   <div class="relative z-10 w-full max-w-md bg-surface-container/60 backdrop-blur-xl border border-white/5 rounded-2xl p-space-2xl shadow-2xl fade-in-up">
     <div class="text-center mb-space-xl">
       <span class="w-8 h-2 bg-primary-container mx-auto block mb-space-md"></span>
-      <h1 class="font-display-hero text-headline-lg uppercase text-white tracking-widest">Authenticate</h1>
-      <p class="font-body-sm text-on-surface-variant mt-space-xs uppercase tracking-widest">Access your cold vault</p>
+      <h1 class="font-display-hero text-headline-lg uppercase text-white tracking-widest">Enlist Now</h1>
+      <p class="font-body-sm text-on-surface-variant mt-space-xs uppercase tracking-widest">Create your profile</p>
     </div>
     
-    <form class="flex flex-col gap-space-lg" onsubmit="event.preventDefault(); alert('Authenticated successfully! Redirecting to vault...'); window.location.href='index.html';">
+    <form class="flex flex-col gap-space-lg" onsubmit="event.preventDefault(); const pass = document.getElementById('pass').value; const conf = document.getElementById('conf').value; if(pass !== conf){alert('Passwords do not match.'); return;} alert('Profile created successfully! Redirecting...'); window.location.href='index.html';">
+      <div>
+        <label class="font-label-caps-sm text-outline block mb-space-xs uppercase">Full Name</label>
+        <input type="text" required class="w-full bg-surface border border-outline-variant/30 rounded px-space-md py-space-sm text-white focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-colors font-body-md" placeholder="Enter your full name" />
+      </div>
       <div>
         <label class="font-label-caps-sm text-outline block mb-space-xs uppercase">Email Address</label>
         <input type="email" required class="w-full bg-surface border border-outline-variant/30 rounded px-space-md py-space-sm text-white focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-colors font-body-md" placeholder="Enter your email" />
       </div>
       <div>
         <label class="font-label-caps-sm text-outline block mb-space-xs uppercase">Password</label>
-        <input type="password" required class="w-full bg-surface border border-outline-variant/30 rounded px-space-md py-space-sm text-white focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-colors font-body-md" placeholder="Enter your password" />
+        <input type="password" id="pass" required class="w-full bg-surface border border-outline-variant/30 rounded px-space-md py-space-sm text-white focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-colors font-body-md" placeholder="Create a password" />
       </div>
-      
-      <div class="flex items-center justify-between mt-space-2xs">
-        <label class="flex items-center gap-space-xs cursor-pointer group">
-          <input type="checkbox" class="accent-primary-container bg-surface border-outline-variant/30 w-4 h-4 rounded cursor-pointer" />
-          <span class="font-body-sm text-on-surface-variant group-hover:text-white transition-colors">Keep me signed in</span>
-        </label>
-        <a href="#" class="font-body-sm text-primary-container hover:text-white transition-colors">Forgot Password?</a>
+      <div>
+        <label class="font-label-caps-sm text-outline block mb-space-xs uppercase">Confirm Password</label>
+        <input type="password" id="conf" required class="w-full bg-surface border border-outline-variant/30 rounded px-space-md py-space-sm text-white focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-colors font-body-md" placeholder="Confirm your password" />
       </div>
       
       <button type="submit" class="w-full bg-primary-container text-black font-label-caps-lg uppercase py-space-md rounded shadow-[0_0_20px_rgba(0,240,255,0.2)] hover:bg-white hover:shadow-[0_0_25px_rgba(255,255,255,0.4)] transition-all mt-space-sm">
-        Sign In
+        Create Profile
       </button>
     </form>
     
     <div class="mt-space-xl text-center">
-      <p class="font-body-sm text-on-surface-variant">Don't have an account? <a href="register.html" class="text-white hover:text-primary-container transition-colors ml-space-xs uppercase font-label-caps-sm tracking-widest border-b border-primary-container/30 pb-0.5">Create Profile</a></p>
+      <p class="font-body-sm text-on-surface-variant">Already have an account? <a href="login.html" class="text-white hover:text-primary-container transition-colors ml-space-xs uppercase font-label-caps-sm tracking-widest border-b border-primary-container/30 pb-0.5">Sign In</a></p>
     </div>
   </div>
 </main>
