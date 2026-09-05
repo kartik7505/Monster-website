@@ -15,11 +15,13 @@ body {
 
 .animation-container {
     position: fixed;
-    top: 80px;
+    top: 0;
     left: 0;
     width: 100%;
-    height: calc(100vh - 80px);
-    height: calc(100svh - 80px);
+    height: 100vh;
+    height: 100svh;
+    padding-top: 80px;
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
