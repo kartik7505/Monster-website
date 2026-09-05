@@ -61,5 +61,56 @@ window.addEventListener('scroll', () => {
         heroText.style.opacity = 0;
       }
     }
+
+    // Toggle header text color when scrolling past the animation slide
+    const mainEl = document.querySelector('main');
+    const headerEl = document.querySelector('header');
+    if (mainEl && headerEl) {
+      const isDarkSection = mainEl.getBoundingClientRect().top <= headerEl.offsetHeight;
+      
+      // Only update DOM if state changed to avoid flicker and layout thrashing
+      if (window._headerDarkState !== isDarkSection) {
+        window._headerDarkState = isDarkSection;
+        
+        const headerLogo = document.getElementById('header-logo-text');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const personBg = document.getElementById('header-person-bg');
+        const personIcon = document.getElementById('header-person-icon');
+        
+        if (isDarkSection) {
+          // Scrolled past animation - change to white text theme
+          if (headerLogo) {
+            headerLogo.classList.remove('text-black');
+            headerLogo.classList.add('text-white');
+          }
+          navLinks.forEach(link => {
+            link.classList.remove('text-black', 'hover:text-gray-800');
+            link.classList.add('text-white', 'hover:text-gray-300');
+          });
+          if (personBg && personIcon) {
+            personBg.classList.remove('bg-primary', 'border-transparent');
+            personBg.classList.add('bg-surface-container-high', 'border-outline-variant/30');
+            personIcon.classList.remove('text-black');
+            personIcon.classList.add('text-white');
+          }
+        } else {
+          // In animation section - keep black text theme
+          if (headerLogo) {
+            headerLogo.classList.remove('text-white');
+            headerLogo.classList.add('text-black');
+          }
+          navLinks.forEach(link => {
+            link.classList.remove('text-white', 'hover:text-gray-300');
+            link.classList.add('text-black', 'hover:text-gray-800');
+          });
+          if (personBg && personIcon) {
+            personBg.classList.remove('bg-surface-container-high', 'border-outline-variant/30');
+            personBg.classList.add('bg-primary', 'border-transparent');
+            personIcon.classList.remove('text-white');
+            personIcon.classList.add('text-black');
+          }
+        }
+      }
+    }
   });
 });
