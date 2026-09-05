@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Ultra - The Ultra Lifestyle</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config={darkMode:"class",theme:{extend:{"colors":{"secondary-fixed":"#dde3e7","error":"#ffb4ab","surface-variant":"#323538","primary":"#dbfcff","on-primary-fixed":"#002022","on-secondary":"#2b3135","tertiary-container":"#cfdbe9","surface-bright":"#37393d","inverse-primary":"#006970","on-surface-variant":"#b9cacb","surface-container-low":"#191c1f","surface-container-highest":"#323538","primary-fixed-dim":"#00dbe9","surface":"#111417","on-tertiary-fixed-variant":"#3d4853","surface-dim":"#111417","on-background":"#e1e2e7","tertiary-fixed-dim":"#bcc8d5","surface-container":"#1d2023","on-secondary-fixed":"#161c1f","primary-fixed":"#7df4ff","on-tertiary-fixed":"#121d26","tertiary-fixed":"#d8e4f2","on-primary-fixed-variant":"#004f54","primary-container":"#00f0ff","inverse-surface":"#e1e2e7","surface-tint":"#00dbe9","secondary-container":"#41484b","surface-container-lowest":"#0b0e11","outline":"#849495","on-surface":"#e1e2e7","on-primary":"#00363a","on-tertiary":"#27323c","surface-container-high":"#272a2e","inverse-on-surface":"#2e3134","tertiary":"#f1f6ff","on-secondary-container":"#b0b6ba","on-error-container":"#ffdad6","outline-variant":"#3b494b","on-secondary-fixed-variant":"#41484b","on-tertiary-container":"#55606c","on-primary-container":"#006970","error-container":"#93000a","secondary-fixed-dim":"#c1c7cb","background":"#111417","secondary":"#c1c7cb","on-error":"#690005"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xl":"2rem","space-3xl":"4.5rem","space-xs":"0.5rem","space-sm":"0.75rem","container-max":"1440px","space-4xl":"6rem","gutter-mobile":"1rem","space-2xl":"3rem","gutter-desktop":"2rem","space-2xs":"0.25rem","space-lg":"1.5rem","space-md":"1rem"},"fontFamily":{"display-hero":["Anton"],"display-hero-mobile":["Anton"],"label-caps-sm":["Space Grotesk"],"headline-lg":["Anton"],"headline-sm":["Space Grotesk"],"label-caps-lg":["Anton"],"headline-lg-mobile":["Anton"],"body-sm":["Space Grotesk"],"headline-md":["Anton"],"body-lg":["Space Grotesk"],"body-md":["Space Grotesk"]},"fontSize":{"display-hero":["84px",{"lineHeight":"84px","letterSpacing":"0.04em","fontWeight":"400"}],"display-hero-mobile":["48px",{"lineHeight":"52px","letterSpacing":"0.03em","fontWeight":"400"}],"label-caps-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.15em","fontWeight":"700"}],"headline-lg":["48px",{"lineHeight":"52px","letterSpacing":"0.03em","fontWeight":"400"}],"headline-sm":["22px",{"lineHeight":"28px","letterSpacing":"0.01em","fontWeight":"700"}],"label-caps-lg":["18px",{"lineHeight":"22px","letterSpacing":"0.12em","fontWeight":"400"}],"headline-lg-mobile":["32px",{"lineHeight":"36px","letterSpacing":"0.02em","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-md":["32px",{"lineHeight":"38px","letterSpacing":"0.02em","fontWeight":"400"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"400"}],"body-md":["15px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}]}}}}
+    </script>
+    <style>
+      @layer base{html,body{margin:0;padding:0;background-color:#111417;color:#e1e2e7}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+      
+      .fade-in-up {
+        animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      .delay-1 { animation-delay: 0.1s; }
+      .delay-2 { animation-delay: 0.2s; }
+      .delay-3 { animation-delay: 0.3s; }
+      
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      
+      .clip-diagonal {
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+      }
+    </style>
+</head>
+<body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+  
+<header class="fixed top-0 left-0 right-0 z-[100] bg-surface/80 backdrop-blur-lg border-b border-white/10 pt-4 pb-4">
+  <div class="max-w-container-max mx-auto px-gutter-desktop flex items-center justify-between gap-space-lg">
+    <div class="flex items-center gap-space-md">
+      <a href="index.html" class="flex items-center gap-space-xs group">
+        <span class="w-2 h-6 bg-primary-container block group-hover:scale-y-110 transition-transform"></span>
+        <span class="font-headline-sm text-headline-sm text-on-surface tracking-wider uppercase group-hover:text-primary-container transition-colors">MONSTER ULTRA</span>
+      </a>
+      <div class="hidden xl:flex items-center px-space-xs py-space-2xs bg-surface-container-high rounded border border-outline-variant/30">
+        <span class="w-1.5 h-1.5 rounded-full bg-primary-container mr-space-xs animate-pulse"></span>
+        <span class="font-label-caps-sm text-label-caps-sm uppercase text-primary-container">ZERO SUGAR</span>
+      </div>
+    </div>
+    <nav class="hidden lg:flex items-center gap-space-md xl:gap-space-lg">
+      <a class="font-label-caps-sm text-label-caps-sm uppercase tracking-widest text-on-surface hover:text-primary-container transition-colors py-space-xs px-space-2xs" href="overview.html">Overview</a>
+      <a class="font-label-caps-sm text-label-caps-sm uppercase tracking-widest text-on-surface hover:text-primary-container transition-colors py-space-xs px-space-2xs" href="flavor-notes.html">Flavor &amp; Notes</a>
+      <a class="font-label-caps-sm text-label-caps-sm uppercase tracking-widest text-on-surface hover:text-primary-container transition-colors py-space-xs px-space-2xs" href="performance-nutrition.html">Performance &amp; Nutrition</a>
+      <a class="font-label-caps-sm text-label-caps-sm uppercase tracking-widest text-primary-container py-space-xs px-space-2xs" href="lifestyle.html">The Ultra Lifestyle</a>
+      <a class="font-label-caps-sm text-label-caps-sm uppercase tracking-widest text-on-surface hover:text-primary-container transition-colors py-space-xs px-space-2xs" href="where-to-buy.html">Where to Buy</a>
+    </nav>
+    <div class="flex items-center gap-space-md">
+      <a class="hidden sm:inline-flex items-center justify-center bg-primary-container text-black font-label-caps-lg text-label-caps-lg uppercase px-space-lg py-space-xs rounded-none shadow-[0_0_20px_-4px_rgba(0,240,255,0.4)] hover:bg-white hover:text-black transition-all duration-200" href="where-to-buy.html">Find in Stores</a>
+      <div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center border border-outline-variant/30">
+        <span class="material-symbols-outlined text-on-surface text-[18px]">person</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="flex-grow pt-[72px]">
+  <!-- Hero Section -->
+  <section class="relative w-full h-[60vh] min-h-[500px] flex items-center overflow-hidden clip-diagonal">
+    <div class="absolute inset-0 z-0">
+      <img src="images/lifestyle-hero.jpg" alt="The Ultra Lifestyle" class="w-full h-full object-cover opacity-80 scale-105 animate-[pulse_10s_ease-in-out_infinite]" />
+      <div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/70 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+    </div>
+    
+    <div class="max-w-container-max mx-auto px-gutter-desktop relative z-10 w-full">
+      <div class="max-w-2xl fade-in-up">
+        <div class="flex items-center gap-space-xs mb-space-md">
+          <span class="font-label-caps-sm text-label-caps-sm text-primary-container uppercase tracking-widest">WORLDWIDE SYNDICATE</span>
+          <span class="text-outline">/</span>
+          <span class="font-label-caps-sm text-label-caps-sm text-outline uppercase">LIMITLESS DRIVEN</span>
+        </div>
+        <h1 class="font-display-hero text-[80px] leading-[80px] uppercase text-white mb-space-sm drop-shadow-xl">
+          The Ultra <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-container to-white">Lifestyle</span>
+        </h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mt-space-md">
+          From alpine backcountry drops to global esports mainstages and supercross stadiums, Monster Ultra powers relentless high-focus pursuits.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lifestyle Grid: 3 Pillars with Image Placeholders -->
+  <section class="py-space-3xl relative z-10 -mt-10">
+    <div class="max-w-container-max mx-auto px-gutter-desktop">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+        <!-- Card 1: Extreme Winter Action Sports -->
+        <div class="bg-surface-container rounded overflow-hidden shadow-lg group flex flex-col fade-in-up delay-1">
+          <div class="h-64 w-full relative overflow-hidden">
+            <div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDK-tbXw8GnZMqCBWilpy5t5rAjGB7wcYiTwBmPAiqhxaLAiO5VCfQfO0ZXbT0K1ueaBUey069kBUhJ2kgihPMhpWu1M4_kJd-fR1_jUoyYtOA0iuD4FbN8l-dKsACjyQ1W8iZCDBsIxFj4_wxDQbgH3nfEVjio8dxgKgpOzeQ3yUfBnTBQkNIEMNSnz5CyzuQHYEeDF0EXtbuXGnCWkDLRc_2qCmykpI07kMRHyArckZxxmSoitKfkkw')"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+            <div class="absolute top-4 left-4 bg-surface-container-lowest/80 backdrop-blur-md px-space-sm py-space-2xs">
+              <span class="font-label-caps-sm text-label-caps-sm text-primary-container uppercase">SNOW &amp; BACKCOUNTRY</span>
+            </div>
+          </div>
+          <div class="p-space-lg flex flex-col flex-1 justify-between">
+            <div>
+              <h3 class="font-headline-sm text-headline-sm text-white uppercase mb-space-xs">SUB-ZERO POWDER EXPEDITIONS</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Frozen ridgelines require 100% presence of mind. The ultra-light citrus formula never freezes heavy in high-altitude freezing packs.
+              </p>
+            </div>
+            <div class="pt-space-md flex items-center justify-between border-t border-white/5 mt-space-md">
+              <span class="font-label-caps-sm text-label-caps-sm uppercase text-outline">ATHLETE TEAM // X-GAMES</span>
+              <span class="material-symbols-outlined text-primary-container text-[20px]">downhill_skiing</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Competitive Esports & Tactical Gaming -->
+        <div class="bg-surface-container rounded overflow-hidden shadow-lg group flex flex-col fade-in-up delay-2">
+          <div class="h-64 w-full relative overflow-hidden">
+            <div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDJ2O0fdpiPDAIoR8BCmaK_CaptCg8cTepsODNPSJG5MmaFG3ZOYqImnQqppfhLSGpyfs5qnLDXDGKwkNayoK43_TtU6Cd5AGUpHYohT2Yin5t4MLRP4xqw2WHwTYj-0ZixmAXr3SX71Q3fpE3jpJfVhZG1SdkfBK5fvNW1FN3MY0SnAjvaE3OCHCoG0gQaUCoBblnbu8rFZWdtANRr_hF-23dUri2rxPUKC_8yJM4jFWVzrYFx54Sc6w')"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+            <div class="absolute top-4 left-4 bg-surface-container-lowest/80 backdrop-blur-md px-space-sm py-space-2xs">
+              <span class="font-label-caps-sm text-label-caps-sm text-primary-container uppercase">PRO GAMING // ESPORTS</span>
+            </div>
+          </div>
+          <div class="p-space-lg flex flex-col flex-1 justify-between">
+            <div>
+              <h3 class="font-headline-sm text-headline-sm text-white uppercase mb-space-xs">MILLISECOND TACTICAL PRECISION</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Zero sugars ensure steady reaction times without tremor or hand-eye fatigue during grueling five-game championship series.
+              </p>
+            </div>
+            <div class="pt-space-md flex items-center justify-between border-t border-white/5 mt-space-md">
+              <span class="font-label-caps-sm text-label-caps-sm uppercase text-outline">TIER-1 PRO TEAMS</span>
+              <span class="material-symbols-outlined text-primary-container text-[20px]">sports_esports</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Supercross & Motocross Thrills -->
+        <div class="bg-surface-container rounded overflow-hidden shadow-lg group flex flex-col fade-in-up delay-3">
+          <div class="h-64 w-full relative overflow-hidden">
+            <div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAHNj89SuP6oobaHSaep8v7_uQJTtWbg_nbETvsqJXv_18zyEpAFO4v3U29JgFq7SmbVEiozNNpIqYjMIX0u2ffOA1n8eGQdxGEIangCGcl2lkysbOgfq6CLVO-fsYzEb3-zuXh-egr97dZFC7aH9dCuyt_U0F9VVu6KpqPIs-6p9ucVdMGFfq8cpgU1gk910__P5xsMoSZfbRkB8JGEv4X_yaxOvpELKyr7flsQG2UDEbp4mot4B3eYA')"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+            <div class="absolute top-4 left-4 bg-surface-container-lowest/80 backdrop-blur-md px-space-sm py-space-2xs">
+              <span class="font-label-caps-sm text-label-caps-sm text-primary-container uppercase">SUPERCROSS RACING</span>
+            </div>
+          </div>
+          <div class="p-space-lg flex flex-col flex-1 justify-between">
+            <div>
+              <h3 class="font-headline-sm text-headline-sm text-white uppercase mb-space-xs">FULL THROTTLE GRIT</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                20 minutes plus two laps in brutal ruts. Monster Ultra fuels riders when heart rates exceed 185 BPM and stamina decides podiums.
+              </p>
+            </div>
+            <div class="pt-space-md flex items-center justify-between border-t border-white/5 mt-space-md">
+              <span class="font-label-caps-sm text-label-caps-sm uppercase text-outline">CHAMPIONSHIP CIRCUIT</span>
+              <span class="material-symbols-outlined text-primary-container text-[20px]">two_wheeler</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ambassador Quote Banner -->
+      <div class="mt-space-2xl bg-surface-container-high p-space-xl rounded-xl shadow-2xl relative overflow-hidden border border-white/5 fade-in-up delay-2">
+        <div class="absolute -right-12 -bottom-12 font-display-hero text-[160px] leading-none text-white/5 select-none pointer-events-none">
+          ULTRA
+        </div>
+        <div class="relative z-10 max-w-3xl flex flex-col gap-space-md">
+          <div class="flex items-center gap-space-xs text-primary-container">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+          </div>
+          <p class="font-headline-sm text-[28px] leading-[36px] text-white italic font-normal">
+            “In high-speed competition, brain fog is fatal. Monster Ultra is the only drink in my prep bag. Crisp, non-syrupy citrus, immediate cognitive lift, and zero sugar crash on lap twenty.”
+          </p>
+          <div class="flex items-center gap-space-md mt-space-sm">
+            <div class="w-14 h-14 rounded-full bg-primary-container/20 flex items-center justify-center text-primary-container border border-primary-container/30">
+              <span class="material-symbols-outlined text-[28px]">sports_motorsports</span>
+            </div>
+            <div>
+              <span class="font-label-caps-lg text-label-caps-lg uppercase text-white block">KAI CHANDLER</span>
+              <span class="font-body-sm text-body-sm text-primary-container">Pro Motocross Series Contender // Team Monster Energy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Reviews -->
+  <section class="max-w-container-max mx-auto px-gutter-desktop pb-space-3xl relative z-10">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-space-2xl gap-space-md">
+      <div>
+        <span class="font-label-caps-sm text-label-caps-sm uppercase text-primary-container tracking-widest">VERIFIED FEEDBACK</span>
+        <h2 class="font-headline-lg text-[48px] uppercase text-white mt-space-2xs">
+          COMMUNITY DISPATCH
+        </h2>
+      </div>
+      <div class="flex items-center gap-space-md bg-surface-container-high border border-white/5 px-space-md py-space-sm rounded-lg">
+        <div class="flex items-center text-primary-container">
+          <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="font-headline-sm text-headline-sm text-white ml-space-2xs">4.9</span>
+        </div>
+        <span class="font-body-sm text-body-sm text-outline">From over 84,000+ Verified Drinkers</span>
+      </div>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+      <!-- Review 1 -->
+      <div class="bg-surface-container p-space-xl rounded-lg shadow-xl flex flex-col justify-between border border-white/5 hover:-translate-y-1 transition-transform">
+        <div class="flex flex-col gap-space-sm">
+          <div class="flex items-center gap-space-2xs text-primary-container mb-space-xs">
+            <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+          </div>
+          <h4 class="font-label-caps-lg text-[22px] leading-tight uppercase text-white">“The undisputed king of zero sugar.”</h4>
+          <p class="font-body-sm text-[15px] text-on-surface-variant leading-relaxed mt-space-xs">
+            Nothing else compares to the white can. It tastes like sparkling chilled grapefruit-lime without any of that bitter chemical sweetener aftertaste. My go-to every morning at 6 AM before heavy training.
+          </p>
+        </div>
+        <div class="pt-space-md mt-space-md flex items-center justify-between border-t border-white/10">
+          <span class="font-label-caps-sm text-label-caps-sm uppercase text-white">DEREK M.</span>
+          <span class="font-label-caps-sm text-label-caps-sm uppercase text-primary-container">Verified Buyer</span>
+        </div>
+      </div>
+      
+      <!-- Review 2 -->
+      <div class="bg-surface-container p-space-xl rounded-lg shadow-xl flex flex-col justify-between border border-white/5 hover:-translate-y-1 transition-transform">
+        <div class="flex flex-col gap-space-sm">
+          <div class="flex items-center gap-space-2xs text-primary-container mb-space-xs">
+            <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+          </div>
+          <h4 class="font-label-caps-lg text-[22px] leading-tight uppercase text-white">“Clean energy for 10-hour code sessions.”</h4>
+          <p class="font-body-sm text-[15px] text-on-surface-variant leading-relaxed mt-space-xs">
+            As a software engineer, sugar spikes kill my flow state. Ultra keeps me laser focused with zero sluggishness afterward. Buy it by the 24-case bundle constantly.
+          </p>
+        </div>
+        <div class="pt-space-md mt-space-md flex items-center justify-between border-t border-white/10">
+          <span class="font-label-caps-sm text-label-caps-sm uppercase text-white">ELENA R.</span>
+          <span class="font-label-caps-sm text-label-caps-sm uppercase text-primary-container">Verified Buyer</span>
+        </div>
+      </div>
+      
+      <!-- Review 3 -->
+      <div class="bg-surface-container p-space-xl rounded-lg shadow-xl flex flex-col justify-between border border-white/5 hover:-translate-y-1 transition-transform">
+        <div class="flex flex-col gap-space-sm">
+          <div class="flex items-center gap-space-2xs text-primary-container mb-space-xs">
+            <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+          </div>
+          <h4 class="font-label-caps-lg text-[22px] leading-tight uppercase text-white">“Ice-cold perfection on trail days.”</h4>
+          <p class="font-body-sm text-[15px] text-on-surface-variant leading-relaxed mt-space-xs">
+            Crack one open at the summit after 2 hours of uphill mountain biking. The crispness cuts straight through thirst and gives you the exact boost needed for downhill descents.
+          </p>
+        </div>
+        <div class="pt-space-md mt-space-md flex items-center justify-between border-t border-white/10">
+          <span class="font-label-caps-sm text-label-caps-sm uppercase text-white">ZACH T.</span>
+          <span class="font-label-caps-sm text-label-caps-sm uppercase text-primary-container">Verified Buyer</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="bg-surface-container-highest border-t border-white/10 py-space-xl text-center mt-auto">
+  <div class="max-w-container-max mx-auto px-gutter-desktop">
+    <h2 class="font-display-hero text-[40px] uppercase text-white opacity-20 mb-space-md tracking-widest">MONSTER ULTRA</h2>
+    <p class="font-label-caps-sm text-label-caps-sm uppercase text-outline">
+      &copy; 2026 Monster Beverage Company. All Rights Reserved. Not a real site.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
