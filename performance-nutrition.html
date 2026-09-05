@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Ultra - Performance & Nutrition</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config={darkMode:"class",theme:{extend:{"colors":{"secondary-fixed":"#dde3e7","error":"#ffb4ab","surface-variant":"#323538","primary":"#dbfcff","on-primary-fixed":"#002022","on-secondary":"#2b3135","tertiary-container":"#cfdbe9","surface-bright":"#37393d","inverse-primary":"#006970","on-surface-variant":"#b9cacb","surface-container-low":"#191c1f","surface-container-highest":"#323538","primary-fixed-dim":"#00dbe9","surface":"#111417","on-tertiary-fixed-variant":"#3d4853","surface-dim":"#111417","on-background":"#e1e2e7","tertiary-fixed-dim":"#bcc8d5","surface-container":"#1d2023","on-secondary-fixed":"#161c1f","primary-fixed":"#7df4ff","on-tertiary-fixed":"#121d26","tertiary-fixed":"#d8e4f2","on-primary-fixed-variant":"#004f54","primary-container":"#00f0ff","inverse-surface":"#e1e2e7","surface-tint":"#00dbe9","secondary-container":"#41484b","surface-container-lowest":"#0b0e11","outline":"#849495","on-surface":"#e1e2e7","on-primary":"#00363a","on-tertiary":"#27323c","surface-container-high":"#272a2e","inverse-on-surface":"#2e3134","tertiary":"#f1f6ff","on-secondary-container":"#b0b6ba","on-error-container":"#ffdad6","outline-variant":"#3b494b","on-secondary-fixed-variant":"#41484b","on-tertiary-container":"#55606c","on-primary-container":"#006970","error-container":"#93000a","secondary-fixed-dim":"#c1c7cb","background":"#111417","secondary":"#c1c7cb","on-error":"#690005"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xl":"2rem","space-3xl":"4.5rem","space-xs":"0.5rem","space-sm":"0.75rem","container-max":"1440px","space-4xl":"6rem","gutter-mobile":"1rem","space-2xl":"3rem","gutter-desktop":"2rem","space-2xs":"0.25rem","space-lg":"1.5rem","space-md":"1rem"},"fontFamily":{"display-hero":["Anton"],"display-hero-mobile":["Anton"],"label-caps-sm":["Space Grotesk"],"headline-lg":["Anton"],"headline-sm":["Space Grotesk"],"label-caps-lg":["Anton"],"headline-lg-mobile":["Anton"],"body-sm":["Space Grotesk"],"headline-md":["Anton"],"body-lg":["Space Grotesk"],"body-md":["Space Grotesk"]},"fontSize":{"display-hero":["84px",{"lineHeight":"84px","letterSpacing":"0.04em","fontWeight":"400"}],"display-hero-mobile":["48px",{"lineHeight":"52px","letterSpacing":"0.03em","fontWeight":"400"}],"label-caps-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.15em","fontWeight":"700"}],"headline-lg":["48px",{"lineHeight":"52px","letterSpacing":"0.03em","fontWeight":"400"}],"headline-sm":["22px",{"lineHeight":"28px","letterSpacing":"0.01em","fontWeight":"700"}],"label-caps-lg":["18px",{"lineHeight":"22px","letterSpacing":"0.12em","fontWeight":"400"}],"headline-lg-mobile":["32px",{"lineHeight":"36px","letterSpacing":"0.02em","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-md":["32px",{"lineHeight":"38px","letterSpacing":"0.02em","fontWeight":"400"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"400"}],"body-md":["15px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}]}}}}
+    </script>
+    <style>
+      @layer base{html,body{margin:0;padding:0;background-color:#111417;color:#e1e2e7}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+      
+      .fade-in-up {
+        animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      .delay-1 { animation-delay: 0.1s; }
+      .delay-2 { animation-delay: 0.2s; }
+      .delay-3 { animation-delay: 0.3s; }
+      
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      
+      .clip-diagonal {
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+      }
+    </style>
+</head>
+<body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+  
+<header class="fixed top-0 left-0 right-0 z-[100] bg-surface/80 backdrop-blur-lg border-b border-white/10 pt-4 pb-4">
+  <div class="max-w-container-max mx-auto px-gutter-desktop flex items-center justify-between gap-space-lg">
+    <div class="flex items-center gap-space-md">
+      <a href="index.html" class="flex items-center gap-space-xs group">
+        <span class="w-2 h-6 bg-primary-container block group-hover:scale-y-110 transition-transform"></span>
+        <span class="font-headline-sm text-headline-sm text-on-surface tracking-wider uppercase group-hover:text-primary-container transition-colors">MONSTER ULTRA</span>
+      </a>
+      <div class="hidden xl:flex items-center px-space-xs py-space-2xs bg-surface-container-high rounded border border-outline-variant/30">
+        <span class="w-1.5 h-1.5 rounded-full bg-primary-container mr-space-xs animate-pulse"></span>
+        <span class="font-label-caps-sm text-label-caps-sm uppercase text-primary-container">ZERO SUGAR</span>
+      </div>
+    </div>
+    <nav class="hidden lg:flex items-center gap-space-md xl:gap-space-lg">
+      <a class="font-label-caps-sm text-label-caps-sm uppercase tracking-widest text-on-surface hover:text-primary-container transition-colors py-space-xs px-space-2xs" href="overview.html">Overview</a>
+      <a class="font-label-caps-sm text-label-caps-sm uppercase tracking-widest text-on-surface hover:text-primary-container transition-colors py-space-xs px-space-2xs" href="flavor-notes.html">Flavor &amp; Notes</a>
+      <a class="font-label-caps-sm text-label-caps-sm uppercase tracking-widest text-primary-container py-space-xs px-space-2xs" href="performance-nutrition.html">Performance &amp; Nutrition</a>
+      <a class="font-label-caps-sm text-label-caps-sm uppercase tracking-widest text-on-surface hover:text-primary-container transition-colors py-space-xs px-space-2xs" href="index.html#the-ultra-lifestyle">The Ultra Lifestyle</a>
+      <a class="font-label-caps-sm text-label-caps-sm uppercase tracking-widest text-on-surface hover:text-primary-container transition-colors py-space-xs px-space-2xs" href="index.html#where-to-buy">Where to Buy</a>
+    </nav>
+    <div class="flex items-center gap-space-md">
+      <a class="hidden sm:inline-flex items-center justify-center bg-primary-container text-black font-label-caps-lg text-label-caps-lg uppercase px-space-lg py-space-xs rounded-none shadow-[0_0_20px_-4px_rgba(0,240,255,0.4)] hover:bg-tertiary hover:text-black transition-all duration-200" href="index.html#where-to-buy">Find in Stores</a>
+      <div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center border border-outline-variant/30">
+        <span class="material-symbols-outlined text-on-surface text-[18px]">person</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="flex-grow pt-[72px]">
+  <!-- Hero Section -->
+  <section class="relative w-full h-[60vh] min-h-[500px] flex items-center overflow-hidden clip-diagonal">
+    <div class="absolute inset-0 z-0">
+      <img src="images/performance-hero.jpg" alt="Performance Data Hero" class="w-full h-full object-cover opacity-70 scale-105 animate-[pulse_10s_ease-in-out_infinite]" />
+      <div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+    </div>
+    
+    <div class="max-w-container-max mx-auto px-gutter-desktop relative z-10 w-full">
+      <div class="max-w-2xl fade-in-up">
+        <div class="flex items-center gap-space-xs mb-space-md">
+          <span class="font-label-caps-sm text-label-caps-sm text-primary-container uppercase tracking-widest">SCIENTIFIC COMPOUND RATIO</span>
+          <span class="text-outline">/</span>
+          <span class="font-label-caps-sm text-label-caps-sm text-outline uppercase">ENGINEERED STAMINA</span>
+        </div>
+        <h1 class="font-display-hero text-[80px] leading-[80px] uppercase text-white mb-space-sm drop-shadow-xl">
+          The Ultra <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-container to-white">Performance Matrix</span>
+        </h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mt-space-md">
+          Four precision-engineered physiological drivers synthesized into a seamless zero-sugar matrix, designed to push human boundaries.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 Matrix Pillars Bento Layout -->
+  <section class="py-space-3xl relative z-10 -mt-10">
+    <div class="max-w-container-max mx-auto px-gutter-desktop">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg mb-space-2xl">
+        <!-- Pillar 1 -->
+        <div class="bg-surface-container border border-white/5 hover:border-primary-container/40 p-space-xl rounded shadow-2xl flex flex-col justify-between hover:bg-surface-container-high transition-all fade-in-up delay-1 group hover:-translate-y-2">
+          <div>
+            <div class="w-14 h-14 rounded bg-primary-container/10 flex items-center justify-center text-primary-container mb-space-lg group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-[32px]">speed</span>
+            </div>
+            <span class="font-label-caps-sm text-label-caps-sm uppercase text-outline">150 MG DOSAGE</span>
+            <h3 class="font-headline-sm text-headline-sm text-white uppercase mt-space-2xs mb-space-xs">PURE ANHYDROUS CAFFEINE</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Calibrated to cross the blood-brain barrier swiftly, driving neural acuity without triggering unwanted jitter or tachycardia spikes.
+            </p>
+          </div>
+          <div class="mt-space-lg pt-space-md border-t border-white/10 text-primary-container font-label-caps-sm text-label-caps-sm uppercase flex items-center justify-between">
+            <span>Cognitive Focus</span>
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+          </div>
+        </div>
+        
+        <!-- Pillar 2 -->
+        <div class="bg-surface-container border border-white/5 hover:border-primary-container/40 p-space-xl rounded shadow-2xl flex flex-col justify-between hover:bg-surface-container-high transition-all fade-in-up delay-2 group hover:-translate-y-2">
+          <div>
+            <div class="w-14 h-14 rounded bg-primary-container/10 flex items-center justify-center text-primary-container mb-space-lg group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-[32px]">cycle</span>
+            </div>
+            <span class="font-label-caps-sm text-label-caps-sm uppercase text-outline">CELLULAR RECOVERY</span>
+            <h3 class="font-headline-sm text-headline-sm text-white uppercase mt-space-2xs mb-space-xs">TAURINE + L-CARNITINE</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Amino compounds that regulate osmotic pressure and facilitate mitochondrial fatty-acid oxidation for long-burn endurance.
+            </p>
+          </div>
+          <div class="mt-space-lg pt-space-md border-t border-white/10 text-primary-container font-label-caps-sm text-label-caps-sm uppercase flex items-center justify-between">
+            <span>Lactate Buffering</span>
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+          </div>
+        </div>
+        
+        <!-- Pillar 3 -->
+        <div class="bg-surface-container border border-white/5 hover:border-primary-container/40 p-space-xl rounded shadow-2xl flex flex-col justify-between hover:bg-surface-container-high transition-all fade-in-up delay-3 group hover:-translate-y-2">
+          <div>
+            <div class="w-14 h-14 rounded bg-primary-container/10 flex items-center justify-center text-primary-container mb-space-lg group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-[32px]">vital_signs</span>
+            </div>
+            <span class="font-label-caps-sm text-label-caps-sm uppercase text-outline">METABOLIC ACCELERATORS</span>
+            <h3 class="font-headline-sm text-headline-sm text-white uppercase mt-space-2xs mb-space-xs">B-COMPLEX (B3, B5, B6, B12)</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Critical enzymatic cofactors assisting cellular respiration and carbohydrate synthesis to optimize continuous energy conversion.
+            </p>
+          </div>
+          <div class="mt-space-lg pt-space-md border-t border-white/10 text-primary-container font-label-caps-sm text-label-caps-sm uppercase flex items-center justify-between">
+            <span>Enzymatic Fuel</span>
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+          </div>
+        </div>
+        
+        <!-- Pillar 4 -->
+        <div class="bg-surface-container border border-white/5 hover:border-primary-container/40 p-space-xl rounded shadow-2xl flex flex-col justify-between hover:bg-surface-container-high transition-all fade-in-up delay-3 group hover:-translate-y-2">
+          <div>
+            <div class="w-14 h-14 rounded bg-primary-container/10 flex items-center justify-center text-primary-container mb-space-lg group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-[32px]">block</span>
+            </div>
+            <span class="font-label-caps-sm text-label-caps-sm uppercase text-outline">ZERO SUGAR</span>
+            <h3 class="font-headline-sm text-headline-sm text-white uppercase mt-space-2xs mb-space-xs">GLYCEMIC NEUTRAL</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Formulated with non-nutritive premium sweeteners. Provides instant taste satisfaction with zero insulin spike and zero afternoon cliff.
+            </p>
+          </div>
+          <div class="mt-space-lg pt-space-md border-t border-white/10 text-primary-container font-label-caps-sm text-label-caps-sm uppercase flex items-center justify-between">
+            <span>Sustained State</span>
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nutrition Tabular Spec Panel -->
+  <section class="pb-space-3xl relative z-10">
+    <div class="max-w-container-max mx-auto px-gutter-desktop">
+      <div class="bg-surface-container-high border border-white/5 p-space-2xl rounded-xl shadow-2xl fade-in-up delay-2">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md pb-space-xl border-b border-white/10">
+          <div>
+            <span class="font-label-caps-sm text-label-caps-sm uppercase text-primary-container tracking-widest">OFFICIAL NUTRITIONAL DOSSIER</span>
+            <h3 class="font-headline-md text-[40px] leading-[44px] uppercase text-white mt-space-2xs">PER CAN SPECIFICATION (350 ML)</h3>
+          </div>
+          <div class="flex items-center gap-space-xs">
+            <span class="font-label-caps-sm text-label-caps-sm uppercase px-space-sm py-space-xs bg-surface-container-highest text-primary-container border border-primary-container/30 rounded">FDA COMPLIANT</span>
+            <span class="font-label-caps-sm text-label-caps-sm uppercase px-space-sm py-space-xs bg-primary-container text-black rounded font-bold">KOSHER CERTIFIED</span>
+          </div>
+        </div>
+        
+        <!-- High-Contrast Clean Data Table -->
+        <div class="overflow-x-auto mt-space-lg">
+          <table class="w-full text-left font-body-sm text-body-sm">
+            <thead>
+              <tr class="text-outline uppercase font-label-caps-sm text-label-caps-sm border-b border-white/5">
+                <th class="p-space-md">Nutrient Component</th>
+                <th class="p-space-md">Quantity / Serving</th>
+                <th class="p-space-md">% Daily Value*</th>
+                <th class="p-space-md hidden md:table-cell">Functional Mechanism</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/5">
+              <tr class="hover:bg-white/5 transition-colors group">
+                <td class="p-space-md font-bold text-white group-hover:text-primary-container transition-colors">Total Calories</td>
+                <td class="p-space-md text-primary-container font-bold">10 kcal</td>
+                <td class="p-space-md text-on-surface">&lt; 1%</td>
+                <td class="p-space-md text-on-surface-variant hidden md:table-cell">Minimal metabolic burden</td>
+              </tr>
+              <tr class="hover:bg-white/5 transition-colors group bg-black/20">
+                <td class="p-space-md font-bold text-white group-hover:text-primary-container transition-colors">Total Sugars</td>
+                <td class="p-space-md text-primary-container font-bold">0 g</td>
+                <td class="p-space-md text-on-surface">0%</td>
+                <td class="p-space-md text-on-surface-variant hidden md:table-cell">Eliminates insulin crash phenomenon</td>
+              </tr>
+              <tr class="hover:bg-white/5 transition-colors group">
+                <td class="p-space-md font-bold text-white group-hover:text-primary-container transition-colors">Sodium</td>
+                <td class="p-space-md text-white">200 mg</td>
+                <td class="p-space-md text-on-surface">9%</td>
+                <td class="p-space-md text-on-surface-variant hidden md:table-cell">Electrolyte retention and cellular hydration</td>
+              </tr>
+              <tr class="hover:bg-white/5 transition-colors group bg-black/20">
+                <td class="p-space-md font-bold text-white group-hover:text-primary-container transition-colors">Niacin (Vitamin B3)</td>
+                <td class="p-space-md text-white">40 mg</td>
+                <td class="p-space-md text-primary-container font-bold">250%</td>
+                <td class="p-space-md text-on-surface-variant hidden md:table-cell">Lipid conversion and neurotransmitter synthesis</td>
+              </tr>
+              <tr class="hover:bg-white/5 transition-colors group">
+                <td class="p-space-md font-bold text-white group-hover:text-primary-container transition-colors">Vitamin B6 (Pyridoxine)</td>
+                <td class="p-space-md text-white">4.2 mg</td>
+                <td class="p-space-md text-primary-container font-bold">247%</td>
+                <td class="p-space-md text-on-surface-variant hidden md:table-cell">Amino acid synthesis and glycogen mobilization</td>
+              </tr>
+              <tr class="hover:bg-white/5 transition-colors group bg-black/20">
+                <td class="p-space-md font-bold text-white group-hover:text-primary-container transition-colors">Vitamin B12 (Cyanocobalamin)</td>
+                <td class="p-space-md text-white">12 mcg</td>
+                <td class="p-space-md text-primary-container font-bold">500%</td>
+                <td class="p-space-md text-on-surface-variant hidden md:table-cell">Erythrocyte production and neurological protection</td>
+              </tr>
+              <tr class="hover:bg-white/5 transition-colors group border-t-2 border-primary-container/20">
+                <td class="p-space-md font-bold text-white group-hover:text-primary-container transition-colors">Monster Proprietary Energy Blend</td>
+                <td class="p-space-md text-white">1,500 mg</td>
+                <td class="p-space-md text-outline">**</td>
+                <td class="p-space-md text-on-surface-variant hidden md:table-cell">Taurine, Panax Ginseng, L-Carnitine, Guarana, Glucuronolactone</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="mt-space-lg pt-space-md border-t border-white/10">
+          <p class="font-body-sm text-body-sm text-outline">
+            *Percent Daily Values are based on a 2,000 calorie diet. **Daily Value not established. Not recommended for children, people sensitive to caffeine, pregnant women or women who are nursing.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="bg-surface-container-highest border-t border-white/10 py-space-xl text-center mt-auto">
+  <div class="max-w-container-max mx-auto px-gutter-desktop">
+    <h2 class="font-display-hero text-[40px] uppercase text-white opacity-20 mb-space-md tracking-widest">MONSTER ULTRA</h2>
+    <p class="font-label-caps-sm text-label-caps-sm uppercase text-outline">
+      &copy; 2026 Monster Beverage Company. All Rights Reserved. Not a real site.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
