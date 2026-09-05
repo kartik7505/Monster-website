@@ -12,7 +12,8 @@
     <link href="https://fonts.googleapis.com" rel="preconnect"/>
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
     <link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config={darkMode:"class",theme:{extend:{"colors":{"secondary-fixed":"#dde3e7","error":"#ffb4ab","surface-variant":"#323538","primary":"#dbfcff","on-primary-fixed":"#002022","on-secondary":"#2b3135","tertiary-container":"#cfdbe9","surface-bright":"#37393d","inverse-primary":"#006970","on-surface-variant":"#b9cacb","surface-container-low":"#191c1f","surface-container-highest":"#323538","primary-fixed-dim":"#00dbe9","surface":"#111417","on-tertiary-fixed-variant":"#3d4853","surface-dim":"#111417","on-background":"#e1e2e7","tertiary-fixed-dim":"#bcc8d5","surface-container":"#1d2023","on-secondary-fixed":"#161c1f","primary-fixed":"#7df4ff","on-tertiary-fixed":"#121d26","tertiary-fixed":"#d8e4f2","on-primary-fixed-variant":"#004f54","primary-container":"#00f0ff","inverse-surface":"#e1e2e7","surface-tint":"#00dbe9","secondary-container":"#41484b","surface-container-lowest":"#0b0e11","outline":"#849495","on-surface":"#e1e2e7","on-primary":"#00363a","on-tertiary":"#27323c","surface-container-high":"#272a2e","inverse-on-surface":"#2e3134","tertiary":"#f1f6ff","on-secondary-container":"#b0b6ba","on-error-container":"#ffdad6","outline-variant":"#3b494b","on-secondary-fixed-variant":"#41484b","on-tertiary-container":"#55606c","on-primary-container":"#006970","error-container":"#93000a","secondary-fixed-dim":"#c1c7cb","background":"#111417","secondary":"#c1c7cb","on-error":"#690005"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xl":"2rem","space-3xl":"4.5rem","space-xs":"0.5rem","space-sm":"0.75rem","container-max":"1440px","space-4xl":"6rem","gutter-mobile":"1rem","space-2xl":"3rem","gutter-desktop":"2rem","space-2xs":"0.25rem","space-lg":"1.5rem","space-md":"1rem"},"fontFamily":{"display-hero":["Anton"],"display-hero-mobile":["Anton"],"label-caps-sm":["Space Grotesk"],"headline-lg":["Anton"],"headline-sm":["Space Grotesk"],"label-caps-lg":["Anton"],"headline-lg-mobile":["Anton"],"body-sm":["Space Grotesk"],"headline-md":["Anton"],"body-lg":["Space Grotesk"],"body-md":["Space Grotesk"]},"fontSize":{"display-hero":["84px",{"lineHeight":"84px","letterSpacing":"0.04em","fontWeight":"400"}],"display-hero-mobile":["48px",{"lineHeight":"52px","letterSpacing":"0.03em","fontWeight":"400"}],"label-caps-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.15em","fontWeight":"700"}],"headline-lg":["48px",{"lineHeight":"52px","letterSpacing":"0.03em","fontWeight":"400"}],"headline-sm":["22px",{"lineHeight":"28px","letterSpacing":"0.01em","fontWeight":"700"}],"label-caps-lg":["18px",{"lineHeight":"22px","letterSpacing":"0.12em","fontWeight":"400"}],"headline-lg-mobile":["32px",{"lineHeight":"36px","letterSpacing":"0.02em","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-md":["32px",{"lineHeight":"38px","letterSpacing":"0.02em","fontWeight":"400"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"400"}],"body-md":["15px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}]}}}}
@@ -36,6 +37,30 @@
       
       .clip-diagonal {
         clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+      }
+
+      /* Custom Map Styles */
+      .leaflet-container {
+        background: #111417;
+        font-family: 'Space Grotesk', sans-serif;
+      }
+      .leaflet-popup-content-wrapper, .leaflet-popup-tip {
+        background-color: #272a2e;
+        color: #e1e2e7;
+        border: 1px solid rgba(255,255,255,0.1);
+        border-radius: 8px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      }
+      .leaflet-popup-content {
+        margin: 16px;
+        font-size: 14px;
+      }
+      .leaflet-popup-close-button {
+        color: #e1e2e7 !important;
+      }
+      /* Dark mode map tiles filter */
+      .dark-map-tiles {
+        filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) brightness(0.7);
       }
     </style>
 </head>
@@ -71,11 +96,11 @@
 
 <main class="flex-grow pt-[72px]">
   <!-- Hero Section -->
-  <section class="relative w-full h-[60vh] min-h-[500px] flex items-center overflow-hidden clip-diagonal">
+  <section class="relative w-full h-[40vh] min-h-[400px] flex items-center overflow-hidden clip-diagonal">
     <div class="absolute inset-0 z-0">
-      <img src="images/wheretobuy-hero.jpg" alt="Find Monster Ultra" class="w-full h-full object-cover opacity-80 scale-105 animate-[pulse_10s_ease-in-out_infinite]" />
+      <img src="images/wheretobuy-hero.jpg" alt="Find Monster Ultra" class="w-full h-full object-cover opacity-60 scale-105 animate-[pulse_10s_ease-in-out_infinite]" />
       <div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-transparent"></div>
-      <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-surface"></div>
     </div>
     
     <div class="max-w-container-max mx-auto px-gutter-desktop relative z-10 w-full">
@@ -83,124 +108,60 @@
         <div class="flex items-center gap-space-xs mb-space-md">
           <span class="font-label-caps-sm text-label-caps-sm text-primary-container uppercase tracking-widest">GLOBAL INVENTORY DISPATCH</span>
           <span class="text-outline">/</span>
-          <span class="font-label-caps-sm text-label-caps-sm text-outline uppercase">LOCATE COLD STOCKS</span>
+          <span class="font-label-caps-sm text-label-caps-sm text-outline uppercase">INDIA LOCATIONS</span>
         </div>
-        <h1 class="font-display-hero text-[80px] leading-[80px] uppercase text-white mb-space-sm drop-shadow-xl">
+        <h1 class="font-display-hero text-[64px] leading-[64px] uppercase text-white mb-space-sm drop-shadow-xl">
           Where to <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-container to-white">Buy</span>
         </h1>
-        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mt-space-md">
-          Enter your location to discover the nearest chilled cold-vault retailers, superstore cases, or direct delivery channels.
-        </p>
       </div>
     </div>
   </section>
 
-  <!-- Store Locator Section -->
-  <section class="py-space-3xl relative z-10 -mt-10 mb-space-2xl">
+  <!-- Real Interactive Locator Section -->
+  <section class="py-space-xl relative z-10 -mt-16 mb-space-2xl">
     <div class="max-w-container-max mx-auto px-gutter-desktop">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl bg-surface-container-high border border-white/5 rounded-xl shadow-2xl overflow-hidden fade-in-up delay-1">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-sm bg-surface-container-high border border-white/5 rounded-xl shadow-2xl overflow-hidden fade-in-up delay-1 h-[700px]">
         
-        <!-- Left Locator Panel (5 Cols) -->
-        <div class="lg:col-span-5 flex flex-col p-space-2xl bg-surface-container-highest/50 relative">
-          <div class="absolute top-0 right-0 w-64 h-64 bg-primary-container/5 rounded-full blur-[60px] pointer-events-none"></div>
-          
-          <div class="relative z-10">
-            <h2 class="font-headline-lg text-[40px] uppercase text-white mb-space-xs">
-              Search Area
+        <!-- Left Panel: Search & Results (4 Cols) -->
+        <div class="lg:col-span-4 flex flex-col bg-surface-container relative z-10 h-full border-r border-white/5">
+          <!-- Search Header -->
+          <div class="p-space-lg bg-surface-container-highest border-b border-white/5 shrink-0">
+            <h2 class="font-headline-sm text-white uppercase mb-space-sm">
+              Search by PIN Code or City
             </h2>
-            <p class="font-body-md text-on-surface-variant mb-space-xl">
-              Type your ZIP code, city, or address to pinpoint the closest guaranteed Monster Ultra inventory.
-            </p>
-
-            <!-- ZIP / Address Search Bar -->
-            <div class="flex flex-col gap-space-xs">
-              <div class="flex items-center w-full px-space-md py-space-md bg-surface-container border border-outline/30 rounded focus-within:border-primary-container transition-colors shadow-inner">
-                <span class="material-symbols-outlined text-primary-container mr-space-sm">location_on</span>
-                <input class="w-full bg-transparent font-label-caps-sm text-[14px] text-white placeholder:text-outline focus:outline-none uppercase tracking-wider" id="locator-input" placeholder="ENTER ZIP CODE OR CITY..." type="text"/>
+            <form id="search-form" class="flex flex-col gap-space-xs">
+              <div class="flex items-center w-full px-space-sm py-space-sm bg-surface-container border border-outline/30 rounded focus-within:border-primary-container transition-colors shadow-inner">
+                <span class="material-symbols-outlined text-primary-container mr-space-sm text-[20px]">location_on</span>
+                <input class="w-full bg-transparent font-label-caps-sm text-[14px] text-white placeholder:text-outline focus:outline-none tracking-wider" id="locator-input" placeholder="e.g. 110001, New Delhi" type="text" required/>
               </div>
-              <button class="bg-primary-container text-black font-label-caps-lg text-label-caps-lg uppercase w-full py-space-md hover:bg-white transition-colors flex items-center justify-center gap-space-xs rounded shadow-[0_0_15px_rgba(0,240,255,0.3)] mt-space-sm" type="button">
-                <span class="material-symbols-outlined text-[20px]">radar</span>
-                SCAN SECTOR
+              <button class="bg-primary-container text-black font-label-caps-lg text-label-caps-lg uppercase w-full py-space-sm hover:bg-white transition-colors flex items-center justify-center gap-space-xs rounded shadow-[0_0_15px_rgba(0,240,255,0.2)] mt-space-2xs" type="submit">
+                <span class="material-symbols-outlined text-[18px]">search</span>
+                FIND STORES
               </button>
+            </form>
+          </div>
+
+          <!-- Results List -->
+          <div class="flex-grow overflow-y-auto p-space-md" id="store-results">
+            <div class="flex justify-between items-center mb-space-sm px-space-xs">
+              <span class="font-label-caps-sm text-label-caps-sm uppercase text-outline tracking-widest" id="results-count">FINDING LOCATIONS...</span>
             </div>
             
-            <div class="mt-space-xl pt-space-xl border-t border-white/10 flex items-center gap-space-sm">
-              <span class="material-symbols-outlined text-primary-container">local_shipping</span>
-              <div>
-                <span class="font-label-caps-sm text-label-caps-sm uppercase text-white block">DIRECT DELIVERY</span>
-                <a href="#" class="font-body-sm text-primary-container hover:text-white transition-colors underline decoration-primary-container/30 underline-offset-4">Order cases online right now</a>
-              </div>
+            <div class="flex flex-col gap-space-xs" id="results-container">
+              <!-- Results populated by JS -->
             </div>
           </div>
         </div>
 
-        <!-- Right Results Panel (7 Cols) -->
-        <div class="lg:col-span-7 flex flex-col p-space-xl lg:p-space-2xl bg-surface-container relative z-10 max-h-[600px] overflow-y-auto">
-          <div class="flex justify-between items-center mb-space-lg">
-            <span class="font-label-caps-sm text-label-caps-sm uppercase text-outline tracking-widest">3 LOCATIONS FOUND NEARBY</span>
-            <span class="flex items-center gap-space-2xs text-primary-container font-label-caps-sm text-label-caps-sm uppercase">
-              <span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
-              LIVE INVENTORY
-            </span>
-          </div>
+        <!-- Right Panel: Interactive Map (8 Cols) -->
+        <div class="lg:col-span-8 relative bg-black h-[400px] lg:h-full w-full z-0" id="map-container">
+          <!-- Leaflet Map attaches here -->
+          <div id="map" class="w-full h-full"></div>
           
-          <div class="flex flex-col gap-space-md">
-            <!-- Result 1 -->
-            <div class="bg-surface-container-high border border-white/5 p-space-lg rounded-lg flex flex-col sm:flex-row sm:items-center justify-between hover:border-primary-container/30 transition-colors group">
-              <div class="flex items-start gap-space-md mb-space-md sm:mb-0">
-                <div class="w-12 h-12 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary-container border border-white/5 group-hover:bg-primary-container/10 transition-colors">
-                  <span class="material-symbols-outlined">local_gas_station</span>
-                </div>
-                <div>
-                  <h4 class="font-label-caps-lg text-[20px] uppercase text-white">SPEEDWAY CENTRAL VAULT</h4>
-                  <p class="font-body-sm text-on-surface-variant mt-1">0.4 Miles • 1420 N Grand Ave • Open 24/7</p>
-                  <div class="mt-space-xs inline-flex px-space-xs py-1 bg-primary-container/10 border border-primary-container/20 rounded font-label-caps-sm text-label-caps-sm uppercase text-primary-container">
-                    IN STOCK: 350ML SINGLE &amp; 16OZ 4-PACK
-                  </div>
-                </div>
-              </div>
-              <button class="bg-surface-container-lowest hover:bg-primary-container hover:text-black text-white px-space-lg py-space-sm font-label-caps-sm text-label-caps-sm uppercase rounded transition-all border border-white/10 hover:border-transparent whitespace-nowrap">
-                DIRECTIONS
-              </button>
-            </div>
-            
-            <!-- Result 2 -->
-            <div class="bg-surface-container-high border border-white/5 p-space-lg rounded-lg flex flex-col sm:flex-row sm:items-center justify-between hover:border-primary-container/30 transition-colors group">
-              <div class="flex items-start gap-space-md mb-space-md sm:mb-0">
-                <div class="w-12 h-12 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary-container border border-white/5 group-hover:bg-primary-container/10 transition-colors">
-                  <span class="material-symbols-outlined">storefront</span>
-                </div>
-                <div>
-                  <h4 class="font-label-caps-lg text-[20px] uppercase text-white">TARGET SUPERSTORE #184</h4>
-                  <p class="font-body-sm text-on-surface-variant mt-1">1.2 Miles • 800 Metro Parkway • Closes 10 PM</p>
-                  <div class="mt-space-xs inline-flex px-space-xs py-1 bg-primary-container/10 border border-primary-container/20 rounded font-label-caps-sm text-label-caps-sm uppercase text-primary-container">
-                    IN STOCK: 12-PACK CASE BUNDLE
-                  </div>
-                </div>
-              </div>
-              <button class="bg-surface-container-lowest hover:bg-primary-container hover:text-black text-white px-space-lg py-space-sm font-label-caps-sm text-label-caps-sm uppercase rounded transition-all border border-white/10 hover:border-transparent whitespace-nowrap">
-                DIRECTIONS
-              </button>
-            </div>
-            
-            <!-- Result 3 -->
-            <div class="bg-surface-container-high border border-white/5 p-space-lg rounded-lg flex flex-col sm:flex-row sm:items-center justify-between hover:border-primary-container/30 transition-colors group">
-              <div class="flex items-start gap-space-md mb-space-md sm:mb-0">
-                <div class="w-12 h-12 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary-container border border-white/5 group-hover:bg-primary-container/10 transition-colors">
-                  <span class="material-symbols-outlined">shopping_cart</span>
-                </div>
-                <div>
-                  <h4 class="font-label-caps-lg text-[20px] uppercase text-white">WHOLE ESSENTIALS &amp; GROCERY</h4>
-                  <p class="font-body-sm text-on-surface-variant mt-1">2.1 Miles • 204 Industrial Way • Open 24/7</p>
-                  <div class="mt-space-xs inline-flex px-space-xs py-1 bg-primary-container/10 border border-primary-container/20 rounded font-label-caps-sm text-label-caps-sm uppercase text-primary-container">
-                    IN STOCK: 350ML SINGLE CHILLED
-                  </div>
-                </div>
-              </div>
-              <button class="bg-surface-container-lowest hover:bg-primary-container hover:text-black text-white px-space-lg py-space-sm font-label-caps-sm text-label-caps-sm uppercase rounded transition-all border border-white/10 hover:border-transparent whitespace-nowrap">
-                DIRECTIONS
-              </button>
-            </div>
+          <!-- Loading Overlay -->
+          <div id="map-loading" class="absolute inset-0 bg-surface/80 backdrop-blur-sm z-[400] flex flex-col items-center justify-center hidden">
+            <span class="w-12 h-12 rounded-full border-4 border-white/10 border-t-primary-container animate-spin mb-space-sm"></span>
+            <span class="font-label-caps-sm text-primary-container uppercase tracking-widest animate-pulse">Acquiring coordinates...</span>
           </div>
         </div>
       </div>
@@ -218,5 +179,153 @@
   </div>
 </footer>
 
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // 1. Initialize Map
+  // Center roughly on India initially
+  const map = L.map('map').setView([20.5937, 78.9629], 5);
+
+  // Use OpenStreetMap tiles with a custom dark mode filter applied via CSS class
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; OpenStreetMap contributors',
+    className: 'dark-map-tiles'
+  }).addTo(map);
+
+  // Custom Icon for Monster
+  const monsterIcon = L.divIcon({
+    className: 'custom-monster-icon',
+    html: `<div style="background-color: #00f0ff; width: 24px; height: 24px; border-radius: 50%; border: 3px solid #111417; box-shadow: 0 0 10px #00f0ff; display: flex; align-items: center; justify-content: center;"><span style="color: black; font-weight: bold; font-size: 14px;">M</span></div>`,
+    iconSize: [24, 24],
+    iconAnchor: [12, 12],
+    popupAnchor: [0, -12]
+  });
+
+  // Mock Database of Indian Stores
+  const stores = [
+    { name: "24Seven Convenience Store", address: "Connaught Place, New Delhi 110001", lat: 28.6304, lng: 77.2177, stock: "350ML SINGLE & 4-PACK" },
+    { name: "Spencer's Retail", address: "MG Road, Gurgaon 122002", lat: 28.4795, lng: 77.0799, stock: "12-PACK CASE" },
+    { name: "Reliance Smart", address: "Sector 18, Noida 201301", lat: 28.5708, lng: 77.3228, stock: "350ML SINGLE CHILLED" },
+    { name: "Nature's Basket", address: "Bandra West, Mumbai 400050", lat: 19.0596, lng: 72.8295, stock: "350ML SINGLE & 4-PACK" },
+    { name: "Foodhall", address: "Lower Parel, Mumbai 400013", lat: 18.9953, lng: 72.8252, stock: "12-PACK CASE" },
+    { name: "Spar Hypermarket", address: "Koramangala, Bangalore 560034", lat: 12.9352, lng: 77.6245, stock: "350ML SINGLE CHILLED" },
+    { name: "More Supermarket", address: "Indiranagar, Bangalore 560038", lat: 12.9784, lng: 77.6408, stock: "350ML SINGLE & 4-PACK" },
+    { name: "Ratnadeep Supermarket", address: "Jubilee Hills, Hyderabad 500033", lat: 17.4326, lng: 78.4071, stock: "350ML SINGLE & 4-PACK" },
+    { name: "Nilgiris", address: "Anna Nagar, Chennai 600040", lat: 13.0850, lng: 80.2101, stock: "12-PACK CASE" },
+    { name: "Keventers Supermarket", address: "Park Street, Kolkata 700016", lat: 22.5528, lng: 88.3516, stock: "350ML SINGLE CHILLED" }
+  ];
+
+  let currentMarkers = [];
+
+  // Function to render stores in sidebar and map
+  function renderStores(storesToDisplay, mapCenter = null) {
+    const container = document.getElementById("results-container");
+    const countLabel = document.getElementById("results-count");
+    
+    // Clear existing markers and list
+    currentMarkers.forEach(m => map.removeLayer(m));
+    currentMarkers = [];
+    container.innerHTML = "";
+
+    countLabel.textContent = `${storesToDisplay.length} LOCATIONS FOUND`;
+
+    if (storesToDisplay.length === 0) {
+      container.innerHTML = `<div class="text-on-surface-variant p-4 text-center">No stores found near this location. Try a major city like New Delhi, Mumbai, or Bangalore.</div>`;
+      if(mapCenter) map.setView(mapCenter, 10);
+      return;
+    }
+
+    // Add to list and map
+    storesToDisplay.forEach((store, index) => {
+      // Add Map Marker
+      const marker = L.marker([store.lat, store.lng], {icon: monsterIcon})
+        .addTo(map)
+        .bindPopup(`
+          <div class="font-headline-sm uppercase text-white">${store.name}</div>
+          <div class="text-on-surface-variant mt-1 mb-2">${store.address}</div>
+          <div class="text-primary-container text-xs font-bold uppercase border border-primary-container/30 px-2 py-1 rounded inline-block bg-primary-container/10">
+            ${store.stock}
+          </div>
+        `);
+      currentMarkers.push(marker);
+
+      // Add to Sidebar
+      const el = document.createElement("div");
+      el.className = "bg-surface-container-high border border-white/5 p-space-md rounded cursor-pointer hover:border-primary-container/50 transition-colors group";
+      el.innerHTML = `
+        <h4 class="font-label-caps-lg text-[18px] uppercase text-white group-hover:text-primary-container transition-colors">${store.name}</h4>
+        <p class="font-body-sm text-[13px] text-on-surface-variant mt-1">${store.address}</p>
+        <div class="mt-2 inline-flex px-2 py-1 bg-primary-container/10 border border-primary-container/20 rounded font-label-caps-sm text-[10px] uppercase text-primary-container">
+          IN STOCK: ${store.stock}
+        </div>
+      `;
+      // Click zooms to marker and opens popup
+      el.addEventListener("click", () => {
+        map.flyTo([store.lat, store.lng], 15, { duration: 1.5 });
+        setTimeout(() => marker.openPopup(), 1500);
+      });
+      container.appendChild(el);
+    });
+
+    // Fit bounds if no specific center is provided or just fly to the first one
+    if (mapCenter) {
+      map.flyTo(mapCenter, 11, { duration: 1.5 });
+    } else {
+      const group = new L.featureGroup(currentMarkers);
+      map.fitBounds(group.getBounds(), { padding: [50, 50] });
+    }
+  }
+
+  // Initial Render (Show all)
+  renderStores(stores);
+
+  // Form Submission (Geocoding)
+  const form = document.getElementById("search-form");
+  const input = document.getElementById("locator-input");
+  const loader = document.getElementById("map-loading");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const query = input.value.trim();
+    if (!query) return;
+
+    loader.classList.remove("hidden");
+
+    try {
+      // Use Nominatim API for free geocoding (OpenStreetMap)
+      // Restrict search to India
+      const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}&countrycodes=in`);
+      const data = await response.json();
+
+      loader.classList.add("hidden");
+
+      if (data && data.length > 0) {
+        const lat = parseFloat(data[0].lat);
+        const lon = parseFloat(data[0].lon);
+        
+        // Find stores within roughly ~50-100km (simple euclidean for demo)
+        // 1 deg is roughly 111km. So 1 deg radius.
+        const radiusDeg = 1.5; 
+        const nearbyStores = stores.filter(s => {
+          const d = Math.sqrt(Math.pow(s.lat - lat, 2) + Math.pow(s.lng - lon, 2));
+          return d < radiusDeg;
+        });
+
+        renderStores(nearbyStores, [lat, lon]);
+      } else {
+        alert("Location not found in India. Please try another PIN code or city.");
+        renderStores([], null); // clear
+      }
+    } catch (err) {
+      console.error(err);
+      loader.classList.add("hidden");
+      alert("Search failed. Please try again later.");
+    }
+  });
+
+});
+</script>
 </body>
 </html>
