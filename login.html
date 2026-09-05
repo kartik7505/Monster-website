@@ -34,7 +34,7 @@
 <body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
   
 <header class="fixed top-0 left-0 right-0 z-[100] bg-surface/80 backdrop-blur-lg border-b border-white/10 pt-4 pb-4">
-  <div class="max-w-container-max mx-auto px-gutter-desktop flex items-center justify-between gap-space-lg">
+  <div class="max-w-container-max mx-auto px-space-md lg:px-gutter-desktop flex items-center justify-between gap-space-lg">
     <div class="flex items-center gap-space-md">
       <a href="index.html" class="flex items-center gap-space-xs group">
         <span class="w-2 h-6 bg-primary-container block group-hover:scale-y-110 transition-transform"></span>
@@ -57,9 +57,26 @@
       <a href="login.html" class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center border border-primary-container cursor-pointer transition-colors group">
         <span class="material-symbols-outlined text-black text-[18px]">person</span>
       </a>
+      <button id="mobile-menu-btn" class="lg:hidden text-on-surface hover:text-primary-container transition-colors p-1 flex items-center justify-center ml-space-xs z-[101]">
+        <span class="material-symbols-outlined text-[28px]">menu</span>
+      </button>
     </div>
   </div>
 </header>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 z-[110] bg-background/98 backdrop-blur-xl flex flex-col items-center justify-center gap-space-lg transition-transform duration-300 translate-x-full lg:hidden">
+  <button id="mobile-menu-close-btn" class="absolute top-6 right-6 text-on-surface hover:text-primary-container transition-colors p-1 flex items-center justify-center">
+    <span class="material-symbols-outlined text-[32px]">close</span>
+  </button>
+  <a class="font-display-hero text-headline-lg uppercase text-white hover:text-primary-container transition-colors" href="overview.html">Overview</a>
+  <a class="font-display-hero text-headline-lg uppercase text-white hover:text-primary-container transition-colors" href="flavor-notes.html">Flavor &amp; Notes</a>
+  <a class="font-display-hero text-headline-lg uppercase text-white hover:text-primary-container transition-colors" href="performance-nutrition.html">Performance</a>
+  <a class="font-display-hero text-headline-lg uppercase text-white hover:text-primary-container transition-colors" href="lifestyle.html">Lifestyle</a>
+  <a class="font-display-hero text-headline-lg uppercase text-white hover:text-primary-container transition-colors" href="where-to-buy.html">Where to Buy</a>
+  <a class="font-display-hero text-headline-lg uppercase text-white hover:text-primary-container transition-colors mt-space-md border-t border-white/20 pt-space-md" href="login.html">Sign In</a>
+</div>
+
 
 <main class="flex-grow pt-[72px] flex items-center justify-center p-space-lg relative overflow-hidden">
   <!-- background effects -->
@@ -102,5 +119,6 @@
   </div>
 </main>
 
+<script src="mobile-nav.js"></script>
 </body>
 </html>
