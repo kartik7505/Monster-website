@@ -253,13 +253,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Add to Sidebar
       const el = document.createElement("div");
-      el.className = "bg-surface-container-high border border-white/5 p-space-md rounded cursor-pointer hover:border-primary-container/50 transition-colors group";
+      el.className = "bg-surface-container-high border border-white/5 p-space-md rounded cursor-pointer hover:border-primary-container/50 transition-colors group flex flex-col sm:flex-row justify-between sm:items-center gap-space-sm";
       el.innerHTML = `
-        <h4 class="font-label-caps-lg text-[18px] uppercase text-white group-hover:text-primary-container transition-colors">${store.name}</h4>
-        <p class="font-body-sm text-[13px] text-on-surface-variant mt-1">${store.address}</p>
-        <div class="mt-2 inline-flex px-2 py-1 bg-primary-container/10 border border-primary-container/20 rounded font-label-caps-sm text-[10px] uppercase text-primary-container">
-          IN STOCK: ${store.stock}
+        <div>
+          <h4 class="font-label-caps-lg text-[18px] uppercase text-white group-hover:text-primary-container transition-colors">${store.name}</h4>
+          <p class="font-body-sm text-[13px] text-on-surface-variant mt-1">${store.address}</p>
+          <div class="mt-2 inline-flex px-2 py-1 bg-primary-container/10 border border-primary-container/20 rounded font-label-caps-sm text-[10px] uppercase text-primary-container">
+            IN STOCK: ${store.stock}
+          </div>
         </div>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=${store.lat},${store.lng}" target="_blank" class="bg-surface-container-lowest hover:bg-primary-container hover:text-black text-white px-space-md py-space-xs font-label-caps-sm text-label-caps-sm uppercase rounded transition-all border border-white/10 hover:border-transparent whitespace-nowrap text-center shrink-0 relative z-10" onclick="event.stopPropagation()">
+          DIRECTIONS
+        </a>
       `;
       // Click zooms to marker and opens popup
       el.addEventListener("click", () => {
