@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"secondary-fixed":"#dde3e7","error":"#ffb4ab","surface-variant":"#323538","primary":"#dbfcff","on-primary-fixed":"#002022","on-secondary":"#2b3135","tertiary-container":"#cfdbe9","surface-bright":"#37393d","inverse-primary":"#006970","on-surface-variant":"#b9cacb","surface-container-low":"#191c1f","surface-container-highest":"#323538","primary-fixed-dim":"#00dbe9","surface":"#111417","on-tertiary-fixed-variant":"#3d4853","surface-dim":"#111417","on-background":"#e1e2e7","tertiary-fixed-dim":"#bcc8d5","surface-container":"#1d2023","on-secondary-fixed":"#161c1f","primary-fixed":"#7df4ff","on-tertiary-fixed":"#121d26","tertiary-fixed":"#d8e4f2","on-primary-fixed-variant":"#004f54","primary-container":"#00f0ff","inverse-surface":"#e1e2e7","surface-tint":"#00dbe9","secondary-container":"#41484b","surface-container-lowest":"#0b0e11","outline":"#849495","on-surface":"#e1e2e7","on-primary":"#00363a","on-tertiary":"#27323c","surface-container-high":"#272a2e","inverse-on-surface":"#2e3134","tertiary":"#f1f6ff","on-secondary-container":"#b0b6ba","on-error-container":"#ffdad6","outline-variant":"#3b494b","on-secondary-fixed-variant":"#41484b","on-tertiary-container":"#55606c","on-primary-container":"#006970","error-container":"#93000a","secondary-fixed-dim":"#c1c7cb","background":"#111417","secondary":"#c1c7cb","on-error":"#690005"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xl":"2rem","space-3xl":"4.5rem","space-xs":"0.5rem","space-sm":"0.75rem","container-max":"1440px","space-4xl":"6rem","gutter-mobile":"1rem","space-2xl":"3rem","gutter-desktop":"2rem","space-2xs":"0.25rem","space-lg":"1.5rem","space-md":"1rem"},"fontFamily":{"display-hero":["Anton"],"display-hero-mobile":["Anton"],"label-caps-sm":["Space Grotesk"],"headline-lg":["Anton"],"headline-sm":["Space Grotesk"],"label-caps-lg":["Anton"],"headline-lg-mobile":["Anton"],"body-sm":["Space Grotesk"],"headline-md":["Anton"],"body-lg":["Space Grotesk"],"body-md":["Space Grotesk"]},"fontSize":{"display-hero":["84px",{"lineHeight":"84px","letterSpacing":"0.04em","fontWeight":"400"}],"display-hero-mobile":["48px",{"lineHeight":"52px","letterSpacing":"0.03em","fontWeight":"400"}],"label-caps-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.15em","fontWeight":"700"}],"headline-lg":["48px",{"lineHeight":"52px","letterSpacing":"0.03em","fontWeight":"400"}],"headline-sm":["22px",{"lineHeight":"28px","letterSpacing":"0.01em","fontWeight":"700"}],"label-caps-lg":["18px",{"lineHeight":"22px","letterSpacing":"0.12em","fontWeight":"400"}],"headline-lg-mobile":["32px",{"lineHeight":"36px","letterSpacing":"0.02em","fontWeight":"400"}],"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-md":["32px",{"lineHeight":"38px","letterSpacing":"0.02em","fontWeight":"400"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"400"}],"body-md":["15px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_4px_30px_rgba(0,0,0,0.5)]"><div class="h-20 max-w-container-max mx-auto px-gutter-desktop flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><span class="w-2 h-6 bg-primary-container block"></span><span class="font-headline-sm text-headline-sm text-tertiary tracking-wider uppercase">MONSTER ULTRA</span></div><div class="hidden xl:flex items-center px-space-xs py-space-2xs bg-surface-container-high rounded border border-outline-variant/30"><span class="w-1.5 h-1.5 rounded-full bg-primary-container mr-space-xs animate-pulse"></span><span class="font-label-caps-sm text-label-caps-sm uppercase text-primary">ZERO SUGAR</span></div></div><nav class="hidden lg:flex items-center gap-space-md xl:gap-space-lg" data-active-classes="text-primary-container bg-surface-container-high rounded px-space-sm py-space-xs"><a aria-current="page" class="font-label-caps-sm uppercase tracking-widest transition-colors text-primary-container bg-surface-container-high rounded px-space-sm py-space-xs" data-path="overview" href="#">Overview</a><a class="font-label-caps-sm text-label-caps-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors py-space-xs px-space-2xs" data-path="flavor-notes" href="#">Flavor &amp; Notes</a><a class="font-label-caps-sm text-label-caps-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors py-space-xs px-space-2xs" data-path="performance-nutrition" href="#">Performance &amp; Nutrition</a><a class="font-label-caps-sm text-label-caps-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors py-space-xs px-space-2xs" data-path="the-ultra-lifestyle" href="#">The Ultra Lifestyle</a><a class="font-label-caps-sm text-label-caps-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors py-space-xs px-space-2xs" data-path="where-to-buy" href="#">Where to Buy</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center justify-center bg-primary-container text-on-primary-container font-label-caps-lg text-label-caps-lg uppercase px-space-lg py-space-xs rounded-none shadow-[0_0_20px_-4px_rgba(0,240,255,0.4)] hover:bg-tertiary hover:text-surface-container-lowest transition-all duration-200" data-path="where-to-buy" href="#">Find in Stores</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-background min-h-screen"><div class="flex flex-col w-full selection:bg-primary-container selection:text-on-primary-container">
+<!-- Ambient Background Glow & Subtle Cold Grid Atmosphere -->
+<div class="relative w-full overflow-hidden">
+<!-- Atmospheric Blurred Spheres (strictly absolute within bounds) -->
+<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[550px] bg-primary-container/10 rounded-full blur-[140px] pointer-events-none"></div>
+<div class="absolute top-[900px] -right-48 w-[500px] h-[500px] bg-primary-fixed-dim/5 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="absolute top-[2200px] -left-48 w-[600px] h-[600px] bg-primary-container/8 rounded-full blur-[160px] pointer-events-none"></div>
+<!-- 1. HERO SHOWCASE SECTION -->
+<section class="relative max-w-container-max mx-auto px-gutter-desktop pt-space-xl pb-space-3xl" id="overview">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Left Headline & Narrative Block (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md z-10">
+<!-- Micro Pill Tag -->
+<div class="flex items-center gap-space-xs self-start bg-surface-container-high px-space-sm py-space-2xs rounded-full shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+<span class="font-label-caps-sm text-label-caps-sm uppercase tracking-widest text-primary">ARCTIC FORMULATION // ZERO COMPROMISE</span>
+</div>
+<!-- Major Headline -->
+<div class="flex flex-col">
+<h1 class="font-display-hero text-display-hero uppercase text-tertiary tracking-tight leading-none">
+              UNLEASH THE <span class="text-primary-container drop-shadow-[0_0_35px_rgba(0,240,255,0.45)]">ULTRA BEAST</span>
+</h1>
+<p class="font-headline-md text-headline-md uppercase text-on-surface-variant tracking-wider mt-space-2xs">
+              ZERO SUGAR. FULL CITRUS RUSH.
+            </p>
+</div>
+<!-- Description -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+            A lighter-tasting, less sweet, sparkling citrus energy blend with zero sugar. Infused with our signature high-octane Monster Energy matrix for razor-sharp cognitive clarity and unrelenting physical drive.
+          </p>
+<!-- Action Buttons -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-sm">
+<a class="inline-flex items-center justify-center gap-space-xs bg-primary-container text-on-primary-container font-label-caps-lg text-label-caps-lg uppercase px-space-xl py-space-sm rounded-none shadow-[0_0_30px_rgba(0,240,255,0.45)] hover:bg-tertiary hover:text-surface-container-lowest transition-all duration-200" href="#where-to-buy">
+<span class="material-symbols-outlined text-[20px]">location_on</span>
+              Find In Stores
+            </a>
+<a class="inline-flex items-center justify-center gap-space-xs bg-surface-container-high/70 hover:bg-surface-variant text-tertiary font-label-caps-lg text-label-caps-lg uppercase px-space-lg py-space-sm rounded-none backdrop-blur-md transition-all duration-200" href="#flavor-notes">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+              Explore Flavor Profile
+            </a>
+</div>
+<!-- Stat Ribbon Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-xs pt-space-md">
+<div class="bg-surface-container-low p-space-sm rounded shadow-sm">
+<span class="font-label-caps-sm text-label-caps-sm text-outline uppercase block">CALORIES</span>
+<span class="font-headline-sm text-headline-sm text-tertiary">10 KCAL</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded shadow-sm">
+<span class="font-label-caps-sm text-label-caps-sm text-outline uppercase block">SUGAR</span>
+<span class="font-headline-sm text-headline-sm text-primary-container">0 GRAMS</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded shadow-sm">
+<span class="font-label-caps-sm text-label-caps-sm text-outline uppercase block">CAFFEINE</span>
+<span class="font-headline-sm text-headline-sm text-tertiary">150 MG</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded shadow-sm">
+<span class="font-label-caps-sm text-label-caps-sm text-outline uppercase block">VOLUME</span>
+<span class="font-headline-sm text-headline-sm text-secondary-fixed">350 ML</span>
+</div>
+</div>
+</div>
+<!-- Right Visual Showcase: Monster Can with Holographic Backlight (5 Cols) -->
+<div class="lg:col-span-5 relative flex items-center justify-center min-h-[500px] lg:min-h-[620px]">
+<!-- Backlight Ambient Disc -->
+<div class="absolute w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-gradient-to-tr from-primary-container/20 via-primary-fixed-dim/35 to-transparent blur-2xl animate-pulse"></div>
+<!-- Intricate Filigree Backing SVG Graphic -->
+<svg class="absolute w-80 sm:w-[440px] h-auto text-primary-container/10 pointer-events-none select-none" fill="none" viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<circle cx="100" cy="100" r="95" stroke="currentColor" stroke-dasharray="3 3" stroke-width="0.75"></circle>
+<circle cx="100" cy="100" r="75" stroke="currentColor" stroke-width="0.5"></circle>
+<path d="M100 5 V195 M5 100 H195" stroke="currentColor" stroke-width="0.3"></path>
+<polygon fill="currentColor" points="100,18 104,26 96,26"></polygon>
+<polygon fill="currentColor" points="100,182 104,174 96,174"></polygon>
+<polygon fill="currentColor" points="18,100 26,96 26,104"></polygon>
+<polygon fill="currentColor" points="182,100 174,96 174,104"></polygon>
+</svg>
+<!-- Floating Interactive Callout Badges -->
+<div class="absolute -top-4 left-4 sm:left-2 bg-surface-container-highest/90 backdrop-blur-md p-space-xs rounded shadow-xl flex items-center gap-space-xs z-20">
+<span class="material-symbols-outlined text-primary-container text-[18px]">verified</span>
+<span class="font-label-caps-sm text-label-caps-sm uppercase tracking-wider text-tertiary">TAURINE + B-VITAMINS</span>
+</div>
+<div class="absolute bottom-6 right-2 sm:right-6 bg-surface-container-highest/90 backdrop-blur-md p-space-xs rounded shadow-xl flex items-center gap-space-xs z-20">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-label-caps-sm text-label-caps-sm uppercase tracking-wider text-tertiary">CRISP CITRUS FINISH</span>
+</div>
+<!-- Product Can Image Embed -->
+<div class="relative z-10 transition-transform duration-500 hover:scale-105 filter drop-shadow-[0_15px_40px_rgba(0,0,0,0.85)]">
+<img alt="Monster Energy Ultra Zero Sugar Can" class="h-[460px] sm:h-[560px] w-auto object-contain select-none" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqYUq37iSfyKXSzzfgic74N_kXXg5-vzHVkNYJMYoBPabUJJlqaqGGiQJAdQL2nCvqSnwm678EhnLQZO3rhV3vf8WYO4DlOZ9dXHbIVLE_vS608AJxQVxsvqThSu-_9ZzSkb8odVxuhslcxI8NbFfw4GkkYuRF7K9_tqya_kV3ggRSZu3UKKvQfuQFltbRS0dVMgeUxR2dZYw7KVnU7dWc1mM74Pz19Zfi8IACliUVwHe7I8iJFGig8tKglcbSEZ9TOmA"/>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. FLAVOR & TASTING NOTES PROFILE SECTION -->
+<section class="w-full bg-surface-container-lowest py-space-3xl relative" id="flavor-notes">
+<div class="max-w-container-max mx-auto px-gutter-desktop">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between mb-space-2xl gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-caps-sm text-label-caps-sm text-primary-container uppercase tracking-widest">SENSORY FORMULATION</span>
+<span class="text-outline">/</span>
+<span class="font-label-caps-sm text-label-caps-sm text-outline uppercase">PROFILE ANALYSIS</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg uppercase text-tertiary mt-space-2xs">
+              THE CRISP CITRUS RUSH
+            </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-lg">
+            Constructed without heavy sugars or syrup weight. Ultra offers a shimmering, ice-cold effervescence engineered to revive tastebuds and deliver an immediate cooling surge.
+          </p>
+</div>
+<!-- Sensory 3-Tier Spectrum Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg mb-space-2xl">
+<!-- Top Note Card -->
+<div class="bg-surface-container p-space-lg rounded shadow-md flex flex-col justify-between group hover:bg-surface-container-high transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-caps-sm text-label-caps-sm uppercase text-primary tracking-wider">PHASE 01</span>
+<span class="material-symbols-outlined text-primary-container text-[24px]">electric_bolt</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-tertiary uppercase mb-space-xs">Top Note: Zesty Citrus</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Initial spark of aromatic lime zest, frosted lemon, and white grapefruit undertones that hits the palate with razor-sharp effervescence.
+              </p>
+</div>
+<div class="pt-space-md">
+<div class="flex justify-between items-center mb-space-2xs font-label-caps-sm text-label-caps-sm uppercase">
+<span class="text-outline">Sparkling Zest</span>
+<span class="text-primary-container">96%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full w-[96%]"></div>
+</div>
+</div>
+</div>
+<!-- Body Card -->
+<div class="bg-surface-container p-space-lg rounded shadow-md flex flex-col justify-between group hover:bg-surface-container-high transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-caps-sm text-label-caps-sm uppercase text-primary tracking-wider">PHASE 02</span>
+<span class="material-symbols-outlined text-primary-container text-[24px]">water_drop</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-tertiary uppercase mb-space-xs">Body: Light Effervescence</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Smooth carbonation glide. Engineered with zero cloying sucrose sweetness to maintain extreme drinkability during intense physical exertion.
+              </p>
+</div>
+<div class="pt-space-md">
+<div class="flex justify-between items-center mb-space-2xs font-label-caps-sm text-label-caps-sm uppercase">
+<span class="text-outline">Palate Weight</span>
+<span class="text-primary-container">15% Ultra Light</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full w-[15%]"></div>
+</div>
+</div>
+</div>
+<!-- Finish Card -->
+<div class="bg-surface-container p-space-lg rounded shadow-md flex flex-col justify-between group hover:bg-surface-container-high transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-caps-sm text-label-caps-sm uppercase text-primary tracking-wider">PHASE 03</span>
+<span class="material-symbols-outlined text-primary-container text-[24px]">ac_unit</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-tertiary uppercase mb-space-xs">Finish: Icy Sub-Zero Cut</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Leaves no syrupy residue or dry mouthfeel. Clean, frosty disappearance that instantly readies you for the next set or match.
+              </p>
+</div>
+<div class="pt-space-md">
+<div class="flex justify-between items-center mb-space-2xs font-label-caps-sm text-label-caps-sm uppercase">
+<span class="text-outline">Cooling Duration</span>
+<span class="text-primary-container">Sustained</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full w-[90%]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sensory Radar & Metrics Grid -->
+<div class="bg-surface-container-high p-space-xl rounded shadow-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<div class="lg:col-span-5 flex flex-col gap-space-sm">
+<span class="font-label-caps-sm text-label-caps-sm uppercase tracking-widest text-primary-container">LAB BENCHMARK</span>
+<h3 class="font-headline-md text-headline-md uppercase text-tertiary">ORGANOLEPTIC BALANCE MATRIX</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Evaluated against conventional sugar-heavy energy formulas. Ultra delivers maximum sensory punch with zero sugar coating or heavy caloric burden.
+              </p>
+<div class="flex items-center gap-space-md pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 bg-primary-container rounded-sm"></span>
+<span class="font-body-sm text-body-sm text-on-surface">Monster Ultra</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 bg-surface-variant rounded-sm"></span>
+<span class="font-body-sm text-body-sm text-outline">Standard Energy</span>
+</div>
+</div>
+</div>
+<!-- In-line Data Visualization (Comparison Bars) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Metric 1 -->
+<div>
+<div class="flex justify-between text-body-sm mb-space-2xs">
+<span class="font-label-caps-sm text-label-caps-sm uppercase text-tertiary">Crisp Citrus Zest &amp; Acidity</span>
+<span class="text-primary-container font-bold">9.8 / 10</span>
+</div>
+<div class="h-3 w-full bg-surface-container-lowest rounded-full overflow-hidden flex">
+<div class="h-full bg-primary-container" style="width: 98%;"></div>
+</div>
+</div>
+<!-- Metric 2 -->
+<div>
+<div class="flex justify-between text-body-sm mb-space-2xs">
+<span class="font-label-caps-sm text-label-caps-sm uppercase text-tertiary">Clean Palate Finish (Zero Stickiness)</span>
+<span class="text-primary-container font-bold">10 / 10</span>
+</div>
+<div class="h-3 w-full bg-surface-container-lowest rounded-full overflow-hidden flex">
+<div class="h-full bg-primary-container" style="width: 100%;"></div>
+</div>
+</div>
+<!-- Metric 3 -->
+<div>
+<div class="flex justify-between text-body-sm mb-space-2xs">
+<span class="font-label-caps-sm text-label-caps-sm uppercase text-tertiary">Instant Mental Alertness</span>
+<span class="text-primary-container font-bold">9.5 / 10</span>
+</div>
+<div class="h-3 w-full bg-surface-container-lowest rounded-full overflow-hidden flex">
+<div class="h-full bg-primary-container" style="width: 95%;"></div>
+</div>
+</div>
+<!-- Metric 4 -->
+<div>
+<div class="flex justify-between text-body-sm mb-space-2xs">
+<span class="font-label-caps-sm text-label-caps-sm uppercase text-tertiary">Residual Syrupy Sweetness</span>
+<span class="text-primary-container font-bold">0.5 / 10</span>
+</div>
+<div class="h-3 w-full bg-surface-container-lowest rounded-full overflow-hidden flex">
+<div class="h-full bg-primary-container" style="width: 5%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. PERFORMANCE & NUTRITION (THE ULTRA MATRIX) -->
+<section class="max-w-container-max mx-auto px-gutter-desktop py-space-3xl" id="performance-nutrition">
+<div class="flex flex-col mb-space-2xl">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-caps-sm text-label-caps-sm uppercase text-primary-container tracking-widest">SCIENTIFIC COMPOUND RATIO</span>
+<span class="text-outline">/</span>
+<span class="font-label-caps-sm text-label-caps-sm uppercase text-outline">ENGINEERED STAMINA</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg uppercase text-tertiary mt-space-2xs">
+          THE ULTRA PERFORMANCE MATRIX
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mt-space-2xs">
+          Four precision-engineered physiological drivers synthesized into a seamless zero-sugar matrix.
+        </p>
+</div>
+<!-- 4 Matrix Pillars Bento Layout -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-2xl">
+<!-- Pillar 1 -->
+<div class="bg-surface-container-low p-space-lg rounded shadow-sm flex flex-col justify-between hover:bg-surface-container transition-all">
+<div>
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center text-primary-container mb-space-md">
+<span class="material-symbols-outlined text-[28px]">speed</span>
+</div>
+<span class="font-label-caps-sm text-label-caps-sm uppercase text-outline">150 MG DOSAGE</span>
+<h3 class="font-headline-sm text-headline-sm text-tertiary uppercase mt-space-2xs mb-space-xs">PURE ANHYDROUS CAFFEINE</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Calibrated to cross the blood-brain barrier swiftly, driving neural acuity without triggering unwanted jitter or tachycardia spikes.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-xs text-primary font-label-caps-sm text-label-caps-sm uppercase flex items-center gap-space-2xs">
+<span>Cognitive Focus</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="bg-surface-container-low p-space-lg rounded shadow-sm flex flex-col justify-between hover:bg-surface-container transition-all">
+<div>
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center text-primary-container mb-space-md">
+<span class="material-symbols-outlined text-[28px]">cycle</span>
+</div>
+<span class="font-label-caps-sm text-label-caps-sm uppercase text-outline">CELLULAR RECOVERY</span>
+<h3 class="font-headline-sm text-headline-sm text-tertiary uppercase mt-space-2xs mb-space-xs">TAURINE + L-CARNITINE</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Amino compounds that regulate osmotic pressure and facilitate mitochondrial fatty-acid oxidation for long-burn endurance.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-xs text-primary font-label-caps-sm text-label-caps-sm uppercase flex items-center gap-space-2xs">
+<span>Lactate Buffering</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="bg-surface-container-low p-space-lg rounded shadow-sm flex flex-col justify-between hover:bg-surface-container transition-all">
+<div>
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center text-primary-container mb-space-md">
+<span class="material-symbols-outlined text-[28px]">vital_signs</span>
+</div>
+<span class="font-label-caps-sm text-label-caps-sm uppercase text-outline">METABOLIC ACCELERATORS</span>
+<h3 class="font-headline-sm text-headline-sm text-tertiary uppercase mt-space-2xs mb-space-xs">B-COMPLEX (B3, B5, B6, B12)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Critical enzymatic cofactors assisting cellular respiration and carbohydrate synthesis to optimize continuous energy conversion.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-xs text-primary font-label-caps-sm text-label-caps-sm uppercase flex items-center gap-space-2xs">
+<span>Enzymatic Fuel</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Pillar 4 -->
+<div class="bg-surface-container-low p-space-lg rounded shadow-sm flex flex-col justify-between hover:bg-surface-container transition-all">
+<div>
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center text-primary-container mb-space-md">
+<span class="material-symbols-outlined text-[28px]">block</span>
+</div>
+<span class="font-label-caps-sm text-label-caps-sm uppercase text-outline">ZERO SUGAR</span>
+<h3 class="font-headline-sm text-headline-sm text-tertiary uppercase mt-space-2xs mb-space-xs">GLYCEMIC NEUTRAL</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Formulated with non-nutritive premium sweeteners. Provides instant taste satisfaction with zero insulin spike and zero afternoon cliff.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-xs text-primary font-label-caps-sm text-label-caps-sm uppercase flex items-center gap-space-2xs">
+<span>Sustained State</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Nutrition Tabular Spec Panel -->
+<div class="bg-surface-container p-space-xl rounded shadow-xl">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md pb-space-lg">
+<div>
+<span class="font-label-caps-sm text-label-caps-sm uppercase text-primary-container tracking-widest">OFFICIAL NUTRITIONAL DOSSIER</span>
+<h3 class="font-headline-md text-headline-md uppercase text-tertiary mt-space-2xs">PER CAN SPECIFICATION (350 ML)</h3>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-caps-sm text-label-caps-sm uppercase px-space-sm py-space-xs bg-surface-container-highest text-primary rounded">FDA COMPLIANT</span>
+<span class="font-label-caps-sm text-label-caps-sm uppercase px-space-sm py-space-xs bg-primary-container text-on-primary-container rounded font-bold">KOSHER CERTIFIED</span>
+</div>
+</div>
+<!-- High-Contrast Clean Data Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-high text-outline uppercase font-label-caps-sm text-label-caps-sm">
+<th class="p-space-md">Nutrient Component</th>
+<th class="p-space-md">Quantity / Serving</th>
+<th class="p-space-md">% Daily Value*</th>
+<th class="p-space-md hidden md:table-cell">Functional Mechanism</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<tr class="bg-surface-container hover:bg-surface-container-high transition-colors">
+<td class="p-space-md font-bold text-tertiary">Total Calories</td>
+<td class="p-space-md text-primary-container font-bold">10 kcal</td>
+<td class="p-space-md text-on-surface">&lt; 1%</td>
+<td class="p-space-md text-on-surface-variant hidden md:table-cell">Minimal metabolic burden</td>
+</tr>
+<tr class="bg-surface-container-low hover:bg-surface-container-high transition-colors">
+<td class="p-space-md font-bold text-tertiary">Total Sugars</td>
+<td class="p-space-md text-primary-container font-bold">0 g</td>
+<td class="p-space-md text-on-surface">0%</td>
+<td class="p-space-md text-on-surface-variant hidden md:table-cell">Eliminates insulin crash phenomenon</td>
+</tr>
+<tr class="bg-surface-container hover:bg-surface-container-high transition-colors">
+<td class="p-space-md font-bold text-tertiary">Sodium</td>
+<td class="p-space-md text-tertiary">200 mg</td>
+<td class="p-space-md text-on-surface">9%</td>
+<td class="p-space-md text-on-surface-variant hidden md:table-cell">Electrolyte retention and cellular hydration</td>
+</tr>
+<tr class="bg-surface-container-low hover:bg-surface-container-high transition-colors">
+<td class="p-space-md font-bold text-tertiary">Niacin (Vitamin B3)</td>
+<td class="p-space-md text-tertiary">40 mg</td>
+<td class="p-space-md text-primary-container font-bold">250%</td>
+<td class="p-space-md text-on-surface-variant hidden md:table-cell">Lipid conversion and neurotransmitter synthesis</td>
+</tr>
+<tr class="bg-surface-container hover:bg-surface-container-high transition-colors">
+<td class="p-space-md font-bold text-tertiary">Vitamin B6 (Pyridoxine)</td>
+<td class="p-space-md text-tertiary">4.2 mg</td>
+<td class="p-space-md text-primary-container font-bold">247%</td>
+<td class="p-space-md text-on-surface-variant hidden md:table-cell">Amino acid synthesis and glycogen mobilization</td>
+</tr>
+<tr class="bg-surface-container-low hover:bg-surface-container-high transition-colors">
+<td class="p-space-md font-bold text-tertiary">Vitamin B12 (Cyanocobalamin)</td>
+<td class="p-space-md text-tertiary">12 mcg</td>
+<td class="p-space-md text-primary-container font-bold">500%</td>
+<td class="p-space-md text-on-surface-variant hidden md:table-cell">Erythrocyte production and neurological protection</td>
+</tr>
+<tr class="bg-surface-container hover:bg-surface-container-high transition-colors">
+<td class="p-space-md font-bold text-tertiary">Monster Proprietary Energy Blend</td>
+<td class="p-space-md text-tertiary">1,500 mg</td>
+<td class="p-space-md text-outline">**</td>
+<td class="p-space-md text-on-surface-variant hidden md:table-cell">Taurine, Panax Ginseng, L-Carnitine, Guarana, Glucuronolactone</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="font-body-sm text-body-sm text-outline mt-space-md">
+          *Percent Daily Values are based on a 2,000 calorie diet. **Daily Value not established. Not recommended for children, people sensitive to caffeine, pregnant women or women who are nursing.
+        </p>
+</div>
+</section>
+<!-- 4. MONSTER ULTRA LIFESTYLE & ATHLETE SHOWCASE -->
+<section class="w-full bg-surface-container-lowest py-space-3xl relative" id="the-ultra-lifestyle">
+<div class="max-w-container-max mx-auto px-gutter-desktop">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between mb-space-2xl gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-caps-sm text-label-caps-sm text-primary-container uppercase tracking-widest">WORLDWIDE SYNDICATE</span>
+<span class="text-outline">/</span>
+<span class="font-label-caps-sm text-label-caps-sm text-outline uppercase">LIMITLESS DRIVEN</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg uppercase text-tertiary mt-space-2xs">
+              THE ULTRA LIFESTYLE
+            </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+            From alpine backcountry drops to global esports mainstages and supercross stadiums, Monster Ultra powers relentless high-focus pursuits.
+          </p>
+</div>
+<!-- Lifestyle Grid: 3 Pillars with Image Placeholders -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Card 1: Extreme Winter Action Sports -->
+<div class="bg-surface-container rounded overflow-hidden shadow-lg group flex flex-col">
+<div class="h-64 w-full relative overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="An extreme snowboarder executing an aerial invert grab over a sheer snowy mountain cliff edge during golden hour, icy blizzard mist catching the dramatic backlighting, high contrast athletic style with electric cyan gear accents, dark moody sky." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDK-tbXw8GnZMqCBWilpy5t5rAjGB7wcYiTwBmPAiqhxaLAiO5VCfQfO0ZXbT0K1ueaBUey069kBUhJ2kgihPMhpWu1M4_kJd-fR1_jUoyYtOA0iuD4FbN8l-dKsACjyQ1W8iZCDBsIxFj4_wxDQbgH3nfEVjio8dxgKgpOzeQ3yUfBnTBQkNIEMNSnz5CyzuQHYEeDF0EXtbuXGnCWkDLRc_2qCmykpI07kMRHyArckZxxmSoitKfkkw')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+<div class="absolute top-4 left-4 bg-surface-container-lowest/80 backdrop-blur-md px-space-sm py-space-2xs">
+<span class="font-label-caps-sm text-label-caps-sm text-primary uppercase">SNOW &amp; BACKCOUNTRY</span>
+</div>
+</div>
+<div class="p-space-lg flex flex-col flex-1 justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-tertiary uppercase mb-space-xs">SUB-ZERO POWDER EXPEDITIONS</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Frozen ridgelines require 100% presence of mind. The ultra-light citrus formula never freezes heavy in high-altitude freezing packs.
+                </p>
+</div>
+<div class="pt-space-md flex items-center justify-between">
+<span class="font-label-caps-sm text-label-caps-sm uppercase text-outline">ATHLETE TEAM // X-GAMES</span>
+<span class="material-symbols-outlined text-primary-container text-[20px]">downhill_skiing</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Competitive Esports & Tactical Gaming -->
+<div class="bg-surface-container rounded overflow-hidden shadow-lg group flex flex-col">
+<div class="h-64 w-full relative overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Professional esports athlete sitting in an arena illuminated with dark slate shadows and brilliant electric cyan LED lighting, wearing high tech headset with extreme focus during a world championship match, dark modern industrial venue." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDJ2O0fdpiPDAIoR8BCmaK_CaptCg8cTepsODNPSJG5MmaFG3ZOYqImnQqppfhLSGpyfs5qnLDXDGKwkNayoK43_TtU6Cd5AGUpHYohT2Yin5t4MLRP4xqw2WHwTYj-0ZixmAXr3SX71Q3fpE3jpJfVhZG1SdkfBK5fvNW1FN3MY0SnAjvaE3OCHCoG0gQaUCoBblnbu8rFZWdtANRr_hF-23dUri2rxPUKC_8yJM4jFWVzrYFx54Sc6w')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+<div class="absolute top-4 left-4 bg-surface-container-lowest/80 backdrop-blur-md px-space-sm py-space-2xs">
+<span class="font-label-caps-sm text-label-caps-sm text-primary uppercase">PRO GAMING // ESPORTS</span>
+</div>
+</div>
+<div class="p-space-lg flex flex-col flex-1 justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-tertiary uppercase mb-space-xs">MILLISECOND TACTICAL PRECISION</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Zero sugars ensure steady reaction times without tremor or hand-eye fatigue during grueling five-game championship series.
+                </p>
+</div>
+<div class="pt-space-md flex items-center justify-between">
+<span class="font-label-caps-sm text-label-caps-sm uppercase text-outline">TIER-1 PRO TEAMS</span>
+<span class="material-symbols-outlined text-primary-container text-[20px]">sports_esports</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Supercross & Motocross Thrills -->
+<div class="bg-surface-container rounded overflow-hidden shadow-lg group flex flex-col">
+<div class="h-64 w-full relative overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A motocross rider launching across a steep dirt triple jump under stadium floodlights, roost flying backwards in high shutter speed detail, dark arena background with glowing turquoise neon sponsor banners, raw adrenaline action sports photography." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAHNj89SuP6oobaHSaep8v7_uQJTtWbg_nbETvsqJXv_18zyEpAFO4v3U29JgFq7SmbVEiozNNpIqYjMIX0u2ffOA1n8eGQdxGEIangCGcl2lkysbOgfq6CLVO-fsYzEb3-zuXh-egr97dZFC7aH9dCuyt_U0F9VVu6KpqPIs-6p9ucVdMGFfq8cpgU1gk910__P5xsMoSZfbRkB8JGEv4X_yaxOvpELKyr7flsQG2UDEbp4mot4B3eYA')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+<div class="absolute top-4 left-4 bg-surface-container-lowest/80 backdrop-blur-md px-space-sm py-space-2xs">
+<span class="font-label-caps-sm text-label-caps-sm text-primary uppercase">SUPERCROSS RACING</span>
+</div>
+</div>
+<div class="p-space-lg flex flex-col flex-1 justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-tertiary uppercase mb-space-xs">FULL THROTTLE GRIT</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  20 minutes plus two laps in brutal ruts. Monster Ultra fuels riders when heart rates exceed 185 BPM and stamina decides podiums.
+                </p>
+</div>
+<div class="pt-space-md flex items-center justify-between">
+<span class="font-label-caps-sm text-label-caps-sm uppercase text-outline">CHAMPIONSHIP CIRCUIT</span>
+<span class="material-symbols-outlined text-primary-container text-[20px]">two_wheeler</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Ambassador Quote Banner -->
+<div class="mt-space-2xl bg-surface-container-high p-space-xl rounded shadow-xl relative overflow-hidden">
+<div class="absolute -right-12 -bottom-12 font-display-hero text-[160px] leading-none text-surface-variant/30 select-none pointer-events-none">
+            ULTRA
+          </div>
+<div class="relative z-10 max-w-3xl flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs text-primary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-tertiary italic font-normal">
+              “In high-speed competition, brain fog is fatal. Monster Ultra is the only drink in my prep bag. Crisp, non-syrupy citrus, immediate cognitive lift, and zero sugar crash on lap twenty.”
+            </p>
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[24px]">sports_motorsports</span>
+</div>
+<div>
+<span class="font-label-caps-lg text-label-caps-lg uppercase text-tertiary block">KAI CHANDLER</span>
+<span class="font-body-sm text-body-sm text-outline">Pro Motocross Series Contender // Team Monster Energy</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. COMMUNITY HYPE & REVIEWS -->
+<section class="max-w-container-max mx-auto px-gutter-desktop py-space-3xl">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between mb-space-2xl gap-space-md">
+<div>
+<span class="font-label-caps-sm text-label-caps-sm uppercase text-primary-container tracking-widest">VERIFIED FEEDBACK</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-tertiary mt-space-2xs">
+            COMMUNITY DISPATCH
+          </h2>
+</div>
+<div class="flex items-center gap-space-md bg-surface-container-low px-space-md py-space-sm rounded">
+<div class="flex items-center text-primary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-headline-sm text-headline-sm text-tertiary ml-space-2xs">4.9</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">From over 84,000+ Verified Drinkers</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Review 1 -->
+<div class="bg-surface-container p-space-lg rounded shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-2xs text-primary-container">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h4 class="font-label-caps-lg text-label-caps-lg uppercase text-tertiary">“The undisputed king of zero sugar.”</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Nothing else compares to the white can. It tastes like sparkling chilled grapefruit-lime without any of that bitter chemical sweetener aftertaste. My go-to every morning at 6 AM before heavy training.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md flex items-center justify-between">
+<span class="font-label-caps-sm text-label-caps-sm uppercase text-secondary-fixed">DEREK M.</span>
+<span class="font-label-caps-sm text-label-caps-sm uppercase text-outline">Verified Buyer</span>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-surface-container p-space-lg rounded shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-2xs text-primary-container">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h4 class="font-label-caps-lg text-label-caps-lg uppercase text-tertiary">“Clean energy for 10-hour code sessions.”</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              As a software engineer, sugar spikes kill my flow state. Ultra keeps me laser focused with zero sluggishness afterward. Buy it by the 24-case bundle constantly.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md flex items-center justify-between">
+<span class="font-label-caps-sm text-label-caps-sm uppercase text-secondary-fixed">ELENA R.</span>
+<span class="font-label-caps-sm text-label-caps-sm uppercase text-outline">Verified Buyer</span>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="bg-surface-container p-space-lg rounded shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-2xs text-primary-container">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h4 class="font-label-caps-lg text-label-caps-lg uppercase text-tertiary">“Ice-cold perfection on trail days.”</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Crack one open at the summit after 2 hours of uphill mountain biking. The crispness cuts straight through thirst and gives you the exact boost needed for downhill descents.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md flex items-center justify-between">
+<span class="font-label-caps-sm text-label-caps-sm uppercase text-secondary-fixed">ZACH T.</span>
+<span class="font-label-caps-sm text-label-caps-sm uppercase text-outline">Verified Buyer</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. 'WHERE TO BUY' & STOCKIST LOCATOR SECTION -->
+<section class="w-full bg-surface-container-lowest py-space-3xl" id="where-to-buy">
+<div class="max-w-container-max mx-auto px-gutter-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl">
+<!-- Left Locator Panel (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<div>
+<span class="font-label-caps-sm text-label-caps-sm uppercase text-primary-container tracking-widest">GLOBAL INVENTORY DISPATCH</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-tertiary mt-space-2xs">
+                LOCATE COLD STOCKS
+              </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+                Enter your location to discover nearest chilled cold-vault retailers, superstore cases, or direct delivery channels.
+              </p>
+</div>
+<!-- ZIP / Address Search Bar -->
+<div class="flex flex-col sm:flex-row gap-space-xs bg-surface-container p-space-xs rounded">
+<div class="flex items-center flex-1 px-space-sm py-space-xs bg-surface-container-high rounded-none">
+<span class="material-symbols-outlined text-outline mr-space-xs">search</span>
+<input class="w-full bg-transparent font-label-caps-sm text-label-caps-sm text-on-surface placeholder:text-outline focus:outline-none uppercase" id="locator-input" placeholder="ENTER ZIP CODE OR CITY (E.G. 90210, AUSTIN)..." type="text"/>
+</div>
+<button class="bg-primary-container text-on-primary-container font-label-caps-lg text-label-caps-lg uppercase px-space-xl py-space-sm hover:bg-tertiary transition-colors flex items-center justify-center gap-space-xs" id="search-stock-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">near_me</span>
+                SCAN AREA
+              </button>
+</div>
+<!-- Live Location Result Cards (Interactive container) -->
+<div class="flex flex-col gap-space-sm" id="stockist-results">
+<!-- Result 1 -->
+<div class="bg-surface-container p-space-md rounded flex items-center justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded bg-surface-container-highest flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined">local_gas_station</span>
+</div>
+<div>
+<h4 class="font-label-caps-lg text-label-caps-lg uppercase text-tertiary">SPEEDWAY CENTRAL VAULT</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">0.4 Miles • 1420 N Grand Ave • Open 24/7</p>
+<span class="font-label-caps-sm text-label-caps-sm uppercase text-primary-fixed-dim">IN STOCK: 350ML SINGLE &amp; 16OZ 4-PACK</span>
+</div>
+</div>
+<button class="bg-surface-container-highest hover:bg-primary-container hover:text-on-primary-container text-tertiary px-space-md py-space-xs font-label-caps-sm text-label-caps-sm uppercase rounded transition-colors">
+                  DIRECTIONS
+                </button>
+</div>
+<!-- Result 2 -->
+<div class="bg-surface-container p-space-md rounded flex items-center justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded bg-surface-container-highest flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined">storefront</span>
+</div>
+<div>
+<h4 class="font-label-caps-lg text-label-caps-lg uppercase text-tertiary">TARGET SUPERSTORE #184</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">1.2 Miles • 800 Metro Parkway • Closes 10 PM</p>
+<span class="font-label-caps-sm text-label-caps-sm uppercase text-primary-fixed-dim">IN STOCK: 12-PACK CASE BUNDLE</span>
+</div>
+</div>
+<button class="bg-surface-container-highest hover:bg-primary-container hover:text-on-primary-container text-tertiary px-space-md py-space-xs font-label-caps-sm text-label-caps-sm uppercase rounded transition-colors">
+                  DIRECTIONS
+                </button>
+</div>
+<!-- Result 3 -->
+<div class="bg-surface-container p-space-md rounded flex items-center justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded bg-surface-container-highest flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined">shopping_cart</span>
+</div>
+<div>
+<h4 class="font-label-caps-lg text-label-caps-lg uppercase text-tertiary">WHOLE ESSENTIALS &amp; GROCERY</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">2.1 Miles • 204 Industrial Way • Open 24/7</p>
+<span class="font-label-caps-sm text-label-caps-sm uppercase text-primary-fixed-dim">IN STOCK: 350ML SINGLE CHILLED</span>
+</div>
+</div>
+<button class="bg-surface-container-highest hover:bg-primary-container hover:text-on-primary-container text-tertiary px-space-md py-space-xs font-label-caps-sm text-label-caps-sm uppercase rounded transition-colors">
+                  DIRECTIONS
+                </button>
+</div>
+</div>
+<!-- Retail Partner Badges -->
+<div class="pt-space-xs">
+<span class="font-label-caps-sm text-label-caps-sm uppercase text-outline block mb-space-xs">AUTHORIZED RETAIL ALLIANCES</span>
+<div class="flex flex-wrap gap-space-xs">
+<span class="px-space-md py-space-xs bg-surface-container font-label-caps-sm text-label-caps-sm uppercase text-on-surface-variant rounded">7-ELEVEN</span>
+<span class="px-space-md py-space-xs bg-surface-container font-label-caps-sm text-label-caps-sm uppercase text-on-surface-variant rounded">CIRCLE K</span>
+<span class="px-space-md py-space-xs bg-surface-container font-label-caps-sm text-label-caps-sm uppercase text-on-surface-variant rounded">WALMART</span>
+<span class="px-space-md py-space-xs bg-surface-container font-label-caps-sm text-label-caps-sm uppercase text-on-surface-variant rounded">TARGET</span>
+<span class="px-space-md py-space-xs bg-surface-container font-label-caps-sm text-label-caps-sm uppercase text-on-surface-variant rounded">KROGER</span>
+<span class="px-space-md py-space-xs bg-surface-container font-label-caps-sm text-label-caps-sm uppercase text-on-surface-variant rounded">AMAZON PRIME</span>
+</div>
+</div>
+</div>
+<!-- Right Direct Case Order Box (5 Cols) -->
+<div class="lg:col-span-5 bg-surface-container p-space-xl rounded shadow-2xl flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -top-12 -right-12 w-48 h-48 bg-primary-container/10 rounded-full blur-2xl pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="px-space-sm py-space-2xs bg-primary-container text-on-primary-container font-label-caps-sm text-label-caps-sm uppercase font-bold rounded-none">
+                  ONLINE DIRECT EXCLUSIVE
+                </span>
+<span class="font-label-caps-sm text-label-caps-sm uppercase text-outline">FREE 2-DAY SHIP</span>
+</div>
+<h3 class="font-headline-md text-headline-md uppercase text-tertiary">
+                MONSTER ULTRA 12-PACK CASE BUNDLE
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs leading-relaxed">
+                Stock your personal cold vault. Twelve 350ml cans shipped directly in heavy-gauge thermal packaging to ensure crisp unboxing.
+              </p>
+<!-- Dynamic Pack Size Selector -->
+<div class="pt-space-lg">
+<span class="font-label-caps-sm text-label-caps-sm uppercase text-outline block mb-space-xs">SELECT PACK QUANTITY</span>
+<div class="grid grid-cols-3 gap-space-xs" id="pack-selector">
+<button class="pack-opt active py-space-sm bg-primary-container text-on-primary-container font-label-caps-lg text-label-caps-lg uppercase transition-all" data-price="$24.99" type="button">
+                    12 CANS
+                  </button>
+<button class="pack-opt py-space-sm bg-surface-container-high text-tertiary font-label-caps-lg text-label-caps-lg uppercase hover:bg-surface-variant transition-all" data-price="$44.99" type="button">
+                    24 CANS
+                  </button>
+<button class="pack-opt py-space-sm bg-surface-container-high text-tertiary font-label-caps-lg text-label-caps-lg uppercase hover:bg-surface-variant transition-all" data-price="$82.99" type="button">
+                    48 CANS
+                  </button>
+</div>
+</div>
+<!-- Price Display -->
+<div class="pt-space-lg flex items-baseline gap-space-sm">
+<span class="font-headline-lg text-headline-lg text-primary-container" id="pack-price">$24.99</span>
+<span class="font-body-sm text-body-sm text-outline">USD • ($2.08 / Can)</span>
+</div>
+</div>
+<div class="pt-space-xl flex flex-col gap-space-xs">
+<button class="w-full bg-primary-container text-on-primary-container font-label-caps-lg text-label-caps-lg uppercase py-space-md shadow-[0_0_25px_rgba(0,240,255,0.4)] hover:bg-tertiary hover:text-surface-container-lowest transition-all" type="button">
+                ADD TO CART • INSTANT CHECKOUT
+              </button>
+<div class="flex items-center justify-center gap-space-xs text-outline font-label-caps-sm text-label-caps-sm uppercase pt-space-xs">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>SECURE ENCRYPTED TRANSACTION • CANCEL ANYTIME</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. FREQUENTLY ASKED QUESTIONS (FAQ ACCORDION) -->
+<section class="max-w-container-max mx-auto px-gutter-desktop py-space-3xl">
+<div class="max-w-3xl mx-auto flex flex-col gap-space-lg">
+<div class="text-center">
+<span class="font-label-caps-sm text-label-caps-sm uppercase text-primary-container tracking-widest">TACTICAL INTEL</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-tertiary mt-space-2xs">
+            FREQUENTLY ASKED QUESTIONS
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+            Everything you need to know about the Ultra formulation, taste profile, and energy matrix.
+          </p>
+</div>
+<!-- Accordion Item 1 -->
+<div class="bg-surface-container rounded overflow-hidden shadow-sm">
+<button class="faq-toggle w-full p-space-lg text-left flex items-center justify-between text-tertiary hover:text-primary transition-colors" type="button">
+<span class="font-headline-sm text-headline-sm uppercase">WHAT DOES MONSTER ULTRA TASTE LIKE?</span>
+<span class="material-symbols-outlined text-primary-container transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content px-space-lg pb-space-lg hidden">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Monster Ultra (commonly known as “White Monster”) features an ultra-crisp, light, sparkling citrus profile with subtle notes of grapefruit and lime. It is distinctly less syrupy and lighter than original Monster Energy, providing immediate refreshment with zero sticky sugar residue.
+            </p>
+</div>
+</div>
+<!-- Accordion Item 2 -->
+<div class="bg-surface-container rounded overflow-hidden shadow-sm">
+<button class="faq-toggle w-full p-space-lg text-left flex items-center justify-between text-tertiary hover:text-primary transition-colors" type="button">
+<span class="font-headline-sm text-headline-sm uppercase">HOW MUCH CAFFEINE AND SUGAR IS IN A CAN?</span>
+<span class="material-symbols-outlined text-primary-container transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content px-space-lg pb-space-lg hidden">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Monster Ultra contains exactly 0 grams of sugar and only 10 calories per 350ml serving. It delivers 150mg of pure caffeine, supplemented with our proprietary blend of Taurine, Panax Ginseng, L-Carnitine, and essential B-Vitamins for sustained focus without insulin spikes.
+            </p>
+</div>
+</div>
+<!-- Accordion Item 3 -->
+<div class="bg-surface-container rounded overflow-hidden shadow-sm">
+<button class="faq-toggle w-full p-space-lg text-left flex items-center justify-between text-tertiary hover:text-primary transition-colors" type="button">
+<span class="font-headline-sm text-headline-sm uppercase">WHEN IS THE OPTIMAL TIME TO CONSUME IT?</span>
+<span class="material-symbols-outlined text-primary-container transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content px-space-lg pb-space-lg hidden">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Monster Ultra is best consumed ice-cold approximately 20 to 30 minutes before high-intensity workouts, competitive gaming sessions, long driving shifts, or whenever sharp cognitive alertness is required. We recommend not exceeding 400mg of caffeine daily from all sources.
+            </p>
+</div>
+</div>
+<!-- Accordion Item 4 -->
+<div class="bg-surface-container rounded overflow-hidden shadow-sm">
+<button class="faq-toggle w-full p-space-lg text-left flex items-center justify-between text-tertiary hover:text-primary transition-colors" type="button">
+<span class="font-headline-sm text-headline-sm uppercase">IS MONSTER ULTRA KOSHER AND GLUTEN-FREE?</span>
+<span class="material-symbols-outlined text-primary-container transition-transform duration-200">expand_more</span>
+</button>
+<div class="faq-content px-space-lg pb-space-lg hidden">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Yes. Monster Energy Ultra is certified Kosher and is manufactured with ingredients that do not contain gluten or animal derivatives, making it suitable for a wide range of dietary protocols.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. BOTTOM CALL TO ACTION STRIP -->
+<section class="w-full bg-surface-container-high border-t-0 py-space-2xl">
+<div class="max-w-container-max mx-auto px-gutter-desktop flex flex-col md:flex-row items-center justify-between gap-space-lg text-center md:text-left">
+<div>
+<span class="font-label-caps-sm text-label-caps-sm uppercase text-primary-container tracking-widest">READY FOR THE DROP?</span>
+<h2 class="font-headline-md text-headline-md uppercase text-tertiary mt-space-2xs">
+            FUEL YOUR NEXT OBJECTIVE
+          </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">
+            Find cold cans in over 150,000 retail vaults nationwide or subscribe for monthly automated drops.
+          </p>
+</div>
+<div class="flex items-center gap-space-sm">
+<a class="bg-primary-container text-on-primary-container font-label-caps-lg text-label-caps-lg uppercase px-space-xl py-space-sm shadow-[0_0_20px_rgba(0,240,255,0.4)] hover:bg-tertiary hover:text-surface-container-lowest transition-all" href="#where-to-buy">
+            LOCATE A STORE
+          </a>
+</div>
+</div>
+</section>
+</div>
+<!-- Inline Interaction Logic (Micro-interactions for pack toggle, FAQ accordion & stock locator) -->
+<script>
+    (function() {
+      // FAQ Accordion Interactivity
+      const toggles = document.querySelectorAll('.faq-toggle');
+      toggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+          const content = toggle.nextElementSibling;
+          const icon = toggle.querySelector('.material-symbols-outlined');
+          const isHidden = content.classList.contains('hidden');
+          
+          // Collapse other opened items
+          document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+          document.querySelectorAll('.faq-toggle .material-symbols-outlined').forEach(i => i.style.transform = 'rotate(0deg)');
+
+          if (isHidden) {
+            content.classList.remove('hidden');
+            if (icon) icon.style.transform = 'rotate(180deg)';
+          }
+        });
+      });
+
+      // Pack Selector Pricing Toggle
+      const packButtons = document.querySelectorAll('.pack-opt');
+      const priceDisplay = document.getElementById('pack-price');
+      packButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          packButtons.forEach(b => {
+            b.classList.remove('active', 'bg-primary-container', 'text-on-primary-container');
+            b.classList.add('bg-surface-container-high', 'text-tertiary');
+          });
+          btn.classList.remove('bg-surface-container-high', 'text-tertiary');
+          btn.classList.add('active', 'bg-primary-container', 'text-on-primary-container');
+          
+          const newPrice = btn.getAttribute('data-price');
+          if (priceDisplay && newPrice) {
+            priceDisplay.textContent = newPrice;
+          }
+        });
+      });
+
+      // Stock Search Feedback Interaction
+      const searchBtn = document.getElementById('search-stock-btn');
+      const input = document.getElementById('locator-input');
+      if (searchBtn && input) {
+        searchBtn.addEventListener('click', () => {
+          const val = input.value.trim();
+          if (val) {
+            searchBtn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">sync</span> SCANNING...';
+            setTimeout(() => {
+              searchBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check</span> STOCKS FOUND';
+              setTimeout(() => {
+                searchBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">near_me</span> SCAN AREA';
+              }, 2000);
+            }, 700);
+          } else {
+            input.focus();
+          }
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest"><div class="max-w-container-max mx-auto px-gutter-desktop pt-space-3xl pb-space-2xl"><div class="grid grid-cols-1 md:grid-cols-12 gap-space-2xl pb-space-2xl"><div class="md:col-span-5 flex flex-col gap-space-md"><div class="flex items-center gap-space-xs"><span class="w-2 h-6 bg-primary-container block"></span><span class="font-headline-sm text-headline-sm text-tertiary uppercase">MONSTER ULTRA</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">Refined, crisp citrus profile engineered with our proprietary Zero Sugar energy matrix. Crafted for athletes, relentless innovators, and late-night tacticians.</p><div class="flex items-center gap-space-md pt-space-xs"><a class="w-10 h-10 flex items-center justify-center bg-surface-container-high rounded text-on-surface-variant hover:text-primary-container hover:bg-surface-variant transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">share</span></a><a class="w-10 h-10 flex items-center justify-center bg-surface-container-high rounded text-on-surface-variant hover:text-primary-container hover:bg-surface-variant transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">videocam</span></a><a class="w-10 h-10 flex items-center justify-center bg-surface-container-high rounded text-on-surface-variant hover:text-primary-container hover:bg-surface-variant transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">chat</span></a><a class="w-10 h-10 flex items-center justify-center bg-surface-container-high rounded text-on-surface-variant hover:text-primary-container hover:bg-surface-variant transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">podcasts</span></a></div></div><div class="md:col-span-3 flex flex-col gap-space-sm"><span class="font-label-caps-sm text-label-caps-sm uppercase text-primary tracking-widest">Navigation &amp; Info</span><div class="flex flex-col gap-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="overview" href="#">Overview Showcase</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="flavor-notes" href="#">Flavor Profiles &amp; Tasting</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="performance-nutrition" href="#">Full Nutritional Breakdown</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="the-ultra-lifestyle" href="#">Team Athletes &amp; Events</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="where-to-buy" href="#">Stockist Locator</a></div></div><div class="md:col-span-4 flex flex-col gap-space-md"><span class="font-label-caps-sm text-label-caps-sm uppercase text-primary tracking-widest">Exclusive Drops &amp; Intel</span><p class="font-body-sm text-body-sm text-on-surface-variant">Unlock covert product previews, athlete signings, and limited edition team apparel directly in your inbox.</p><form class="flex flex-col sm:flex-row gap-space-xs"><div class="flex-1 relative"><input class="w-full bg-surface-container px-space-md py-space-sm font-label-caps-sm text-label-caps-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary-container rounded-none" placeholder="ENTER YOUR EMAIL" type="email"/></div><button class="bg-primary-container text-on-primary-container px-space-lg py-space-sm font-label-caps-lg text-label-caps-lg uppercase hover:bg-tertiary transition-colors" type="submit">JOIN</button></form></div></div><div class="pt-space-xl flex flex-col lg:flex-row items-center justify-between gap-space-md"><p class="font-body-sm text-body-sm text-outline text-center lg:text-left">© 2024 Monster Energy Company. All rights reserved. Zero Sugar Citrus High Performance Formula.</p><div class="flex flex-wrap items-center justify-center gap-space-lg"><a class="font-label-caps-sm text-label-caps-sm uppercase text-outline hover:text-on-surface transition-colors" href="#">Privacy Policy</a><a class="font-label-caps-sm text-label-caps-sm uppercase text-outline hover:text-on-surface transition-colors" href="#">Terms of Use</a><a class="font-label-caps-sm text-label-caps-sm uppercase text-outline hover:text-on-surface transition-colors" href="#">CA Transparency Act</a><a class="font-label-caps-sm text-label-caps-sm uppercase text-outline hover:text-on-surface transition-colors" href="#">Nutrition Disclosure</a></div></div></div></footer></body></html>
