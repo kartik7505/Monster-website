@@ -309,6 +309,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       // Use Nominatim API for free geocoding
       const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}&countrycodes=in`);
+      if (!response.ok) throw new Error(`Geocoding error: ${response.status}`);
       const data = await response.json();
 
       if (data && data.length > 0) {
@@ -327,11 +328,20 @@ document.addEventListener("DOMContentLoaded", () => {
         
         const overpassRes = await fetch("https://overpass-api.de/api/interpreter", {
           method: "POST",
-          body: overpassQuery
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          body: `data=${encodeURIComponent(overpassQuery)}`
         });
+        
+        if (!overpassRes.ok) throw new Error(`Overpass error: ${overpassRes.status}`);
         const overpassData = await overpassRes.json();
         
         loader.classList.add("hidden");
+
+        if (!overpassData.elements) {
+          throw new Error(overpassData.remark || "Invalid data received from Overpass");
+        }
 
         const nearbyStores = overpassData.elements.map(el => {
            const name = el.tags.name || (el.tags.shop === 'supermarket' ? 'Supermarket' : 'Convenience Store');
@@ -354,7 +364,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } catch (err) {
       console.error(err);
       loader.classList.add("hidden");
-      alert("Search failed. Please try again later.");
+      alert("Search failed: " + err.message);
     }
   });
 
